@@ -1,4 +1,4 @@
-# Web Project (Name)
+# Web Project Online library
 
 ## -Important to use "git pull" before pushing and also to keep up to date
 
