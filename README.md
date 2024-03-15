@@ -11,5 +11,3 @@
     -You can open VSCode in project folder and run a live server extension
     -Go to browser and access this URL http://localhost:5000
     -Note that 5000 in URL is a port number may change from pc to another depending on settings.json
-### Test
-Youssef 
