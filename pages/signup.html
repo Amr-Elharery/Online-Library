@@ -33,15 +33,15 @@
 <!-- End Header -->
 <br /><br />
 <div class="container flex">
-  <form>
+  <form id="signup-form" class="signup-form">
     <h2>Sign Up</h2>
     <div class="input-box">
       <label>
         <input
-              type="text"
-              name="first_name"
-              required
-              placeholder="First Name"
+                type="text"
+                name="first_name"
+                required
+                placeholder="First Name"
         />
       </label>
     </div>
@@ -139,5 +139,13 @@
   </div>
 </footer>
 <!-- Footer Ended -->
+
+<script>
+  document.getElementById("signup-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    window.location.href = "login.html";
+  });
+</script>
+
 </body>
 </html>
