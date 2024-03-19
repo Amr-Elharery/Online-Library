@@ -1,0 +1,38 @@
+Link: https://printige.net/product/engineering-optical-networks/
+ID: 1
+Name: Engineering Optical Networks
+Author: Sudhir Warier
+Category: Physics
+Description: Written by a leading expert in the field, this book provides a comprehensive introduction to the fundamental concepts of transport and data networks. This resource examines backbone network architectures and functions. The evolution, key components, and techniques of telecommunication networks are presented, including voice and data transmission, fiber optic communication and optical link design. This book explores the photonic network architecture and includes chapters on transport networks, synchronous optical networks, optical transport networks, and dense wavelength division multiplexing.
+
+
+Link: https://printige.net/product/clean-code/
+ID: 2
+Name: Clean Code
+Author: Robert C. Martin
+Category: Software Engineering
+Description: Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn’t have to be that way. Noted software expert Robert C. Martin presents a revolutionary paradigm with this book.
+
+
+Link: https://printige.net/product/essential-math-for-data-science/
+ID: 3
+Name: Essential Math for Data Science
+Author: Thomas Nield
+Category: Mathmatics
+Description: Master the math needed to excel in data science, machine learning, and statistics. In this book author Thomas Nield guides you through areas like calculus, probability, linear algebra, and statistics and how they apply to techniques like linear regression, logistic regression, and neural networks. Along the way you’ll also gain practical insights into the state of data science and how to use those insights to maximize your career.
+
+
+Link: https://printige.net/product/atomic-habits/
+ID: 4
+Name: Atomic Habits
+Author: James Clear
+Category: Self-Help
+Description: No matter your goals, Atomic Habits offers a proven framework for improving – every day. James Clear, one of the world’s leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.
+
+
+Link: https://printige.net/product/thinking-with-type/
+ID: 5
+Name: Thinking With Type
+Author: Ellen Lupton
+Category: Graphic Design
+Description: Thinking with Type is the definitive guide to using typography in visual communication, from the printed page to the computer screen. This revised edition includes forty-eight pages of new content, including the latest information on style sheets for print and the web, the use of ornaments and captions, lining and non-lining numerals, the use of small caps and enlarged capitals, as well as information on captions, font licensing, mixing typefaces, and hand lettering. Throughout the book, visual examples show how to be inventive within systems of typographic form—what the rules are and how to break them. Thinking with Type is a type book for everyone: designers, writers, editors, students, and anyone else who works with words.
