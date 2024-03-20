@@ -1,156 +1,232 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <title>Admin</title>
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <h1>Welcome Admin</h1>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="../../index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Sign out</a>
-                        </li>
-                    </ul>
-                </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Admin Home</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container flex">
+        <nav>
+          <h1>Welcome, Admin</h1>
+          <ul>
+            <li>
+              <a href="#" class="btn-shape btn-effect">Home</a>
+            </li>
+            <li>
+              <a href="../home.html" class="btn-shape btn-effect">Log out</a>
+            </li>
+            <li>
+              <a href="add-book.html" class="btn-shape btn-effect">Add Book</a>
+            </li>
+            <li>
+              <div class="search flex">
+                <input
+                  type="search"
+                  name="search-book"
+                  placeholder="Type Author, Title, Category"
+                />
+                <button class="btn-shape btn-effect">
+                  <img
+                    src="../../media/images/search.png"
+                    width="10"
+                    height="10"
+                  />
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!--    Content    -->
+    <div class="content">
+      <div class="container">
+        <br />
+        <br />
+        <br />
+        <div class="books grid">
+          <!-- Books -->
+          <div class="book1">
+            <div class="image">
+              <img
+                src="../../media/books/1.png"
+                alt="Image of book"
+                width="250"
+                height="300"
+              />
+              <p><b>&nbsp; &nbsp; Engineering Optical Networks</b></p>
             </div>
-        </header>
-
-        <!--    Content    -->
-        <div class="content">
-            <div class="container">
-                <h2>All Books:</h2>
-                <div class="addNewBook">
-                    <h3>Add a new book?</h3>
-                    <button class="btn-shape btn-effect">
-                        <a href="add-books.html">Go to add</a>
-                    </button>
-                </div>
-                <br/>
-                <div class="books grid-3">
-                    <!-- Book -->
-                    <div class="book">
-                        <div class="image">
-                            <img src="" alt="Image of book">
-                        </div>
-                        <div class="name">
-                            <p>Engineering Optical Networks</p>
-                            <p>By: Sudhir Warier</p>
-                        </div>
-                        <div class="category">
-                            <p>Category: Physics</p>
-                        </div>
-                        <div class="description">
-                           Description: Written by a leading expert in the field, this book provides a comprehensive introduction to the fundamental concepts of transport and data networks. This resource examines backbone network architectures and functions. The evolution, key components, and techniques of telecommunication networks are presented, including voice and data transmission, fiber optic communication and optical link design. This book explores the photonic network architecture and includes chapters on transport networks, synchronous optical networks, optical transport networks, and dense wavelength division multiplexing.
-                        </div>
-                        
-                        <div class="more">
-                            <button class="btn-shape btn-effect">
-                                <a href="https://printige.net/product/engineering-optical-networks/" target="_blank">More</a>
-                            </button>
-                        </div>
-                    </div>
-                    <hr />
-                    <!-- Book -->
-                    <div class="book">
-                        <div class="image">
-                            <img src="" alt="Image of book">
-                        </div>
-                        <div class="name">
-                            <p>Clean Code</p>
-                            <p>By: Robert C. Martin</p>
-                        </div>
-                        <div class="category">
-                            <p>Category: Software Engineering</p>
-                        </div>
-                        <div class="description">
-                           Description: Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn’t have to be that way. Noted software expert Robert C. Martin presents a revolutionary paradigm with this book.
-                            </div>
-
-                        <div class="more">
-                            <button class="btn-shape btn-effect">
-                                <a href="https://printige.net/product/clean-code/" target="_blank">More</a>
-                            </button>
-                        </div>
-                    </div>
-                    <hr/>
-                    <!-- Book -->
-                    <div class="book">
-                        <div class="image">
-                            <img src="" alt="Image of book">
-                        </div>
-                        <div class="name">
-                            <p>Essential Math for Data Science</p>
-                            <p>By: Thomas Nield</p>
-                        </div>
-                        <div class="category">
-                            <p>Category: Mathmatics</p>
-                        </div>
-                        <div class="description">
-                           Description: Master the math needed to excel in data science, machine learning, and statistics. In this book author Thomas Nield guides you through areas like calculus, probability, linear algebra, and statistics and how they apply to techniques like linear regression, logistic regression, and neural networks. Along the way you’ll also gain practical insights into the state of data science and how to use those insights to maximize your career.
-                        </div>
-
-                        <div class="more">
-                            <button class="btn-shape btn-effect">
-                                <a href="https://printige.net/product/essential-math-for-data-science/" target="_blank">More</a>
-                            </button>
-                        </div>
-                    </div>
-                    <hr />
-                    <!-- Book -->
-                    <div class="book">
-                        <div class="image">
-                            <img src="" alt="Image of book">
-                        </div>
-                        <div class="name">
-                            <p>Atomic Habits</p>
-                            <p>By: James Clear</p>
-                        </div>
-                        <div class="category">
-                            <p>Category: Self-Help</p>
-                        </div>
-                        <div class="description">
-                           Description: No matter your goals, Atomic Habits offers a proven framework for improving – every day. James Clear, one of the world’s leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.
-                            </div>
-
-                        <div class="more">
-                            <button class="btn-shape btn-effect">
-                                <a href="https://printige.net/product/atomic-habits/" target="_blank">More</a>
-                            </button>
-                        </div>
-                    </div>
-                    <hr />
-                    <!-- Book -->
-                    <div class="book">
-                        <div class="image">
-                            <img src="" alt="Image of book">
-                        </div>
-                        <div class="name">
-                            <p>Thinking With Type</p>
-                            <p>By: Ellen Lupton</p>
-                        </div>
-                        <div class="category">
-                            <p>Category: Graphic Design</p>
-                        </div>
-                        <div class="description">
-                           Description: Thinking with Type is the definitive guide to using typography in visual communication, from the printed page to the computer screen. This revised edition includes forty-eight pages of new content, including the latest information on style sheets for print and the web, the use of ornaments and captions, lining and non-lining numerals, the use of small caps and enlarged capitals, as well as information on captions, font licensing, mixing typefaces, and hand lettering. Throughout the book, visual examples show how to be inventive within systems of typographic form—what the rules are and how to break them. Thinking with Type is a type book for everyone: designers, writers, editors, students, and anyone else who works with words.
-                            </div>
-
-                        <div class="more">
-                            <button class="btn-shape btn-effect">
-                                <a href="https://printige.net/product/thinking-with-type/" target="_blank">More</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div class="buttons">
+              &nbsp; &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">
+                <a href="edit-book.html" target="_blank"> Edit </a>
+              </button>
+              &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">Delete</button>
+              &nbsp; &nbsp; Avaliable
             </div>
+          </div>
+          <br />
+          <div class="book2">
+            <div class="image">
+              <img
+                src="../../media/books/2.jpg"
+                alt="Image of book"
+                width="250"
+                height="300"
+              />
+              <p>
+                <b>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; Clean Code</b
+                >
+              </p>
+            </div>
+            <div class="buttons">
+              &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">
+                <a href="edit-book.html" target="_blank"> Edit </a>
+              </button>
+              &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">Delete</button>
+              &nbsp; &nbsp; Not Avaliable
+            </div>
+          </div>
+          <br />
+          <div class="book3">
+            <div class="image">
+              <img
+                src="../../media/books/3.jpg"
+                alt="Image of book"
+                width="250"
+                height="300"
+              />
+              <p><b>&nbsp; &nbsp; Essential Math for Data Science</b></p>
+            </div>
+            <div class="buttons">
+              &nbsp; &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">
+                <a href="edit-book.html" target="_blank"> Edit </a>
+              </button>
+              &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">Delete</button>
+              &nbsp; &nbsp; Avaliable
+            </div>
+          </div>
+          <br />
+          <div class="book4">
+            <div class="image">
+              <img
+                src="../../media/books/4.jpg"
+                alt="Image of book"
+                width="250"
+                height="300"
+              />
+              <p>
+                <b>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                  Atomic Habits</b
+                >
+              </p>
+            </div>
+            <div class="buttons">
+              &nbsp; &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">
+                <a href="edit-book.html" target="_blank"> Edit </a>
+              </button>
+              &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">Delete</button>
+              &nbsp; &nbsp; Avaliable
+            </div>
+          </div>
+          <br />
+          <div class="book5">
+            <div class="image">
+              <img
+                src="../../media/books/5.jpg"
+                alt="Image of book"
+                width="250"
+                height="300"
+              />
+              <p>
+                <b
+                  >&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Thinking With
+                  Type</b
+                >
+              </p>
+            </div>
+            <div class="buttons">
+              &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">
+                <a href="edit-book.html" target="_blank"> Edit </a>
+              </button>
+              &nbsp; &nbsp;
+              <button class="btn-shape btn-effect">Delete</button>
+              &nbsp; &nbsp; Not Avaliable
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <hr />
+          <!-- Start Footer -->
+          <footer>
+            <div class="container">
+              <h3>Follow Us</h3>
+              <a href="https://facebook.com" target="_blank">
+                <img
+                  src="../../media/images/facebook.png"
+                  alt="Facebook"
+                  width="33"
+                  height="33"
+                />
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                <img
+                  src="../../media/images/instagram.png"
+                  alt="Instagram"
+                  width="33"
+                  height="33"
+                />
+              </a>
+              <a href="https://tiktok.com" target="_blank">
+                <img
+                  src="../../media/images/tiktok.png"
+                  alt="Tiktok"
+                  width="33"
+                  height="33"
+                />
+              </a>
+              <a href="https://x.com" target="_blank">
+                <img
+                  src="../../media/images/x.png"
+                  alt="X"
+                  width="33"
+                  height="33"
+                />
+              </a>
+              <a href="https://linkedin.com" target="_blank">
+                <img
+                  src="../../media/images/linkedin.png"
+                  alt="LinkedIn"
+                  width="33"
+                  height="33"
+                />
+              </a>
+              <br />
+              &copy; 2024 Online Library. All rights reserved.
+            </div>
+          </footer>
+          <!-- Footer Ended -->
         </div>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
