@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Book</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container flex">
+        <nav>
+          <h1>Welcome, Admin</h1>
+          <ul>
+            <li>
+              <a href="admin-home.html" class="btn-shape btn-effect">Home</a>
+            </li>
+            <li>
+              <a href="../home.html" class="btn-shape btn-effect">Log out</a>
+            </li>
+            <li>
+              <a href="add-book.html" class="btn-shape btn-effect">Add Book</a>
+            </li>
+            <li>
+              <div class="search flex">
+                <input
+                  type="search"
+                  name="search-book"
+                  placeholder="Type Author, Title, Category"
+                />
+                <button class="btn-shape btn-effect">
+                  <img
+                    src="../../media/images/search.png"
+                    width="10"
+                    height="10"
+                  />
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+    <br />
+    <br /><br />
+
+    <div class="container flex">
+      <h3>Edit Book Details:</h3>
+
+      <label for="book-name-selection">Choose a Book to edit: </label>
+      <select name="book" id="book-name-selection">
+        <option>Engineering Optical Networks</option>
+        <option>Clean Code</option>
+        <option>Essential Math for Data Science</option>
+        <option>Atomic Habits</option>
+        <option>Thinking With Type</option>
+      </select>
+      <br />
+      <br />
+
+      <form>
+        <label for="book-name">Book ID:</label>
+        <input
+          type="text"
+          id="book-name"
+          name="book_name"
+          placeholder="Type Book ID"
+        /><br /><br />
+        <label for="book-name">Book Name:</label>
+        <input
+          type="text"
+          id="book-name"
+          name="book_name"
+          placeholder="Type Book Name"
+        /><br /><br />
+
+        <label for="author">Author:</label>
+        <input
+          type="text"
+          id="author"
+          name="author"
+          placeholder="Type Author"
+        /><br /><br />
+
+        <label for="category">Category:</label>
+        <input
+          type="text"
+          id="category"
+          name="category"
+          placeholder="Type Book category"
+        /><br /><br />
+
+        <label for="description">Description:</label><br />
+        <textarea id="description" name="description">
+Enter description...</textarea
+        ><br /><br />
+
+        <button class="btn-shape" type="submit">
+          <a href="admin-home.html">Update Book</a>
+        </button>
+      </form>
+    </div>
+    <br />
+    <br />
+    <br />
+    <hr />
+    <!-- Start Footer -->
+    <footer>
+      <div class="container">
+        <h3>Follow Us</h3>
+        <a href="https://facebook.com" target="_blank">
+          <img
+            src="../../media/images/facebook.png"
+            alt="Facebook"
+            width="33"
+            height="33"
+          />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img
+            src="../../media/images/instagram.png"
+            alt="Instagram"
+            width="33"
+            height="33"
+          />
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+          <img
+            src="../../media/images/tiktok.png"
+            alt="Tiktok"
+            width="33"
+            height="33"
+          />
+        </a>
+        <a href="https://x.com" target="_blank">
+          <img src="../../media/images/x.png" alt="X" width="33" height="33" />
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <img
+            src="../../media/images/linkedin.png"
+            alt="LinkedIn"
+            width="33"
+            height="33"
+          />
+        </a>
+        <br />
+        &copy; 2024 Online Library. All rights reserved.
+      </div>
+    </footer>
+    <!-- Footer Ended -->
+  </body>
+</html>

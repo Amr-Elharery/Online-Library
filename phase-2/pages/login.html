@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container flex">
+        <nav>
+          <h1>Welcome to our Online Library</h1>
+          <ul>
+            <li>
+              <a href="home.html" class="btn-shape btn-effect">Home</a>
+            </li>
+            <li>
+              <a href="login.html" class="btn-shape btn-effect">Login</a>
+            </li>
+            <li>
+              <a href="signup.html" class="btn-shape btn-effect">Sign up</a>
+            </li>
+            <li>
+              <a href="contact-us.html" class="btn-shape btn-effect"
+                >Contact us</a
+              >
+            </li>
+            <li>
+              <div class="search flex">
+                <input
+                  type="search"
+                  name="search-book"
+                  placeholder="Type Author, Title, Category"
+                />
+                <button class="btn-shape btn-effect">
+                  <img
+                    src="../media/images/search.png"
+                    width="10"
+                    height="10"
+                  />
+                  <!--Dummy element untill add icon here-->
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+    <br />
+    <br />
+    <br />
+
+    <div class="container flex">
+      <form id="loginForm">
+        <h2>Login:</h2>
+        <div class="input-box">
+          <input type="text" placeholder="Username" required />
+        </div>
+
+        <div class="input-box">
+          <input type="password" placeholder="Password" required />
+        </div>
+
+        <div class="user-role-selection">
+          <label>Select Role:</label><br />
+          <input
+            type="radio"
+            id="user_role_user"
+            name="user_role"
+            value="user"
+            required
+          />
+          <label for="user_role_user">User</label>
+          <input
+            type="radio"
+            id="user_role_admin"
+            name="user_role"
+            value="admin"
+            required
+          />
+          <label for="user_role_admin">Admin</label>
+        </div>
+
+        <div class="input-box">
+          <input type="checkbox" id="terms" required />
+          <label for="terms">I agree to the terms and conditions</label>
+        </div>
+
+        <button type="submit" class="btn-shape">Login</button>
+        <br />
+        <br />
+        <div class="forget-regeister">
+          <a href="#">Forgot Password?</a>
+          <p>Don't have an account? <a href="signup.html">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <hr />
+    <!-- Start Footer -->
+    <footer>
+      <div class="container">
+        <h3>Follow Us</h3>
+        <a href="https://facebook.com" target="_blank">
+          <img
+            src="../media/images/facebook.png"
+            alt="Facebook"
+            width="33"
+            height="33"
+          />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img
+            src="../media/images/instagram.png"
+            alt="Instagram"
+            width="33"
+            height="33"
+          />
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+          <img
+            src="../media/images/tiktok.png"
+            alt="Tiktok"
+            width="33"
+            height="33"
+          />
+        </a>
+        <a href="https://x.com" target="_blank">
+          <img src="../media/images/x.png" alt="X" width="33" height="33" />
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <img
+            src="../media/images/linkedin.png"
+            alt="LinkedIn"
+            width="33"
+            height="33"
+          />
+        </a>
+        <br />
+        &copy; 2024 Online Library. All rights reserved.
+      </div>
+    </footer>
+    <!-- Footer Ended -->
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var role = document.querySelector(
+            'input[name="user_role"]:checked'
+          ).value;
+
+          if (role === "user") {
+            window.location.href = "user/user-home.html";
+          } else if (role === "admin") {
+            window.location.href = "admin/admin-home.html";
+          }
+        });
+    </script>
+  </body>
+</html>
