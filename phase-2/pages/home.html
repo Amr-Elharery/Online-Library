@@ -3,15 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+
     <title>Home</title>
   </head>
   <body>
     <!-- Start Header -->
     <header>
-      <div class="container flex">
+      <div class="container flex flex-between items-center">
+        <div class="logo">
+          <a href="/">
+            <i class="fa-solid fa-book c-primary"></i>
+            MyBook
+          </a>
+        </div>
+        <i class="fa-solid fa-bars menu-icon show-mobile"></i>
         <nav>
-          <h1>Welcome to our Online Library</h1>
-          <ul>
+          <ul class="flex">
             <li>
               <a href="#" class="btn-shape btn-effect">Home</a>
             </li>
@@ -25,23 +35,6 @@
               <a href="contact-us.html" class="btn-shape btn-effect"
                 >Contact us</a
               >
-            </li>
-            <li>
-              <div class="search flex">
-                <input
-                  type="search"
-                  name="search-book"
-                  placeholder="Type Author, Title, Category"
-                />
-                <button class="btn-shape btn-effect">
-                  <img
-                    src="../media/images/search.png"
-                    width="10"
-                    height="10"
-                  />
-                  <!--Dummy element untill add icon here-->
-                </button>
-              </div>
             </li>
           </ul>
         </nav>

@@ -2,18 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
 
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>Online Library</title>
   </head>
 
   <body>
     <!-- Start Header -->
     <header>
-      <div class="container flex">
-        <h1>Welcome to our Online Library</h1>
+      <div class="container flex flex-between items-center">
+        <div class="logo">
+          <a href="/">
+            <i class="fa-solid fa-book c-primary"></i>
+            MyBook
+          </a>
+        </div>
+        <i class="fa-solid fa-bars menu-icon show-mobile"></i>
         <nav>
-          <ul>
+          <ul class="flex">
             <li>
               <a href="pages/home.html" class="btn-shape btn-effect">Home</a>
             </li>
@@ -26,23 +35,9 @@
               >
             </li>
             <li>
-              <a href="pages/contact.html" class="btn-shape btn-effect"
+              <a href="pages/contact-us.html" class="btn-shape btn-effect"
                 >Contact</a
               >
-            </li>
-            <li>
-              <div class="search flex">
-                <input
-                  type="search"
-                  name="search-book"
-                  placeholder="Type Author, Title, Category"
-                  width="200"
-                  height="200"
-                />
-                <button class="btn-shape btn-effect">
-                  <img src="media/images/search.png" width="10" height="10" />
-                </button>
-              </div>
             </li>
           </ul>
         </nav>

@@ -1,0 +1,62 @@
+
+
+/* Header */
+header {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+header .logo a,
+header .container .menu-icon {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  header nav {
+    padding-inline: 20px;
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    left: 100%;
+    width: 100%;
+    background-color: #fff;
+    justify-content: center;
+    transition: var(--primary-transition);
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    -webkit-transition: var(--primary-transition);
+    -moz-transition: var(--primary-transition);
+    -ms-transition: var(--primary-transition);
+    -o-transition: var(--primary-transition);
+  }
+  header nav:hover {
+    left: 0px;
+  }
+  header nav ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  header nav ul a {
+    text-align: center;
+    display: block;
+  }
+}
+
+header nav ul {
+  gap: 10px;
+}
+header nav a {
+  color: #fff;
+}
+
+header .container .menu-icon:hover + nav {
+  left: 0px;
+}
