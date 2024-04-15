@@ -15,12 +15,14 @@ header .container .menu-icon {
 @media (max-width: 767px) {
   header nav {
     padding-inline: 20px;
-    display: flex;
+    padding-bottom: 10px;
+    display: none;
     z-index: 1;
     position: absolute;
     top: 55px;
     left: 100%;
     width: 100%;
+    opacity: 0;
     background-color: #fff;
     font-weight: bold;
     justify-content: center;
@@ -34,9 +36,6 @@ header .container .menu-icon {
     -moz-transition: var(--primary-transition);
     -ms-transition: var(--primary-transition);
     -o-transition: var(--primary-transition);
-  }
-  header nav:hover {
-    left: 0px;
   }
   header nav ul {
     width: 100%;
