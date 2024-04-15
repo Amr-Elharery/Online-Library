@@ -1,15 +1,10 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+     document
+        .getElementById("signup-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          window.location.href = "../login/login.html";
+        });
 
-var selectedRole = document.getElementById('user_role').value;
-
-
-if (selectedRole === 'user') {
-    window.location.href = '../user/user-home.html';
-} else if (selectedRole === 'admin') {
-    window.location.href = '../admin/admin-home.html';
-}
-});
 
 
 
@@ -18,17 +13,18 @@ var currentPageUrl = window.location.href;
 
 
 function highlightActiveLink() {
-var links = document.querySelectorAll('nav a');
-
-links.forEach(function(link) {
-
-if (link.href === currentPageUrl) {
-    link.classList.add('active'); 
-}
-});
+  var links = document.querySelectorAll('nav a');
+  
+  links.forEach(function(link) {
+ 
+    if (link.href === currentPageUrl) {
+      link.classList.add('active'); 
+    }
+  });
 }
 
 highlightActiveLink();
+
 
 
 
@@ -51,3 +47,4 @@ menu.addEventListener('click', () => {
     }, 100);
   }
 });
+

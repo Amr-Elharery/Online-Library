@@ -6,10 +6,10 @@
 }
 
 body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../../media/images/main-bg.jpg");
-    }
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url("../../media/images/main-bg.jpg");
+}
 
 
 .container-signup{
@@ -26,9 +26,8 @@ h1{
     color: #07001f;
     margin-bottom: 1.2rem;
 }
-form input{
+form input {
     width: 92%;
-    outline: none;
     border: 1px #fff solid;
     padding: 12px 20px;
     margin-bottom: 10px;
@@ -72,7 +71,18 @@ input:focus{
 .terms input[type="checkbox"]
 {
     margin-top: 10px;
+    
 }
+form button[type = "submit"]
+{
+    width: 83%;
+    border: 1px #fff solid;
+    padding: 12px 20px;
+    border-radius: 20px;
+   
+}
+
+
 
 
 .member{
@@ -88,6 +98,8 @@ input:focus{
 
 
 
+
+
 .user-role-selection select {
     width: 83%;
     padding: 10px;
@@ -95,29 +107,23 @@ input:focus{
     border-radius: 20px;
     background-color: #eaeff4;
     font-size: 16px;
+    outline: none;
 }
 
 /* Style the arrow */
-/* .user-role-selection select::-ms-expand {
+.user-role-selection select::-ms-expand {
 display: none;
 }
 
 .user-role-selection select {
 appearance: none;
-} */
+}
 
 /* Style when the select is focused */
 .user-role-selection select:focus {
 border: 1px solid rgb(194,194,194);
 }
 
-form button[type = "submit"]
-{
-    width: 83%;
-    border: 1px #fff solid;
-    padding: 12px 20px;
-    border-radius: 20px;
-}
 
 
 /* Style for the active link */
