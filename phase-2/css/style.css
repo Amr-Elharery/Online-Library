@@ -1,7 +1,8 @@
-.landing {
-  min-height: calc(100vh - 62px);
-  background-image: url('../media/images/landing.jpg');
+body {
+  background-image: url("../media/images/landing.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .landing .text {
   display: flex;
@@ -43,4 +44,8 @@
   .landing img {
     width: 300px;
   }
+}
+
+h1 {
+  max-width: 80%;
 }
