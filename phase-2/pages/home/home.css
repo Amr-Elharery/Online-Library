@@ -18,7 +18,10 @@
   width: 100%;
   height: 300px;
 }
-
+.book img:hover {
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}
 .image p {
   text-align: center;
   padding: 0;
@@ -31,9 +34,9 @@
 
 /* Buttons container */
 .buttons {
-  text-align: center;
+  display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
 }
 
 /* Button styling */
@@ -52,6 +55,10 @@
   color: white;
 }
 
+.btn-effect:active {
+  background-color: primary-alt-color;
+}
+
 .btn-effect a {
   text-decoration: none;
   color: inherit;
@@ -59,5 +66,11 @@
 }
 
 body {
-  background-image: url("../../media/images/landing.jpg");
+  background-image: url("../../media/images/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h3 {
+  font-weight: bold;
 }

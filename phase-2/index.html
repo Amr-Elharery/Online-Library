@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/header.css" />
@@ -20,14 +22,16 @@
             MyBook
           </a>
         </div>
-        <i class="fa-solid fa-bars menu-icon show-mobile"></i>
-        <nav>
+        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+        <nav id="toogle-nav">
           <ul class="flex">
             <li>
-              <a href="pages/home.html" class="btn-shape btn-effect">Home</a>
+              <a href="pages/home/home.html" class="btn-shape btn-effect"
+                >Home</a
+              >
             </li>
             <li>
-              <a href="pages/login/login.html" class="btn-shape btn-effect">Login</a>
+              <a href="pages/login.html" class="btn-shape btn-effect">Login</a>
             </li>
             <li>
               <a href="pages/signup/signup.html" class="btn-shape btn-effect"
@@ -35,7 +39,9 @@
               >
             </li>
             <li>
-              <a href="pages/contact-us.html" class="btn-shape btn-effect"
+              <a
+                href="pages/contact-us/contact-us.html"
+                class="btn-shape btn-effect"
                 >Contact</a
               >
             </li>
@@ -44,59 +50,24 @@
       </div>
     </header>
     <!-- End Header -->
-
-    <div class="container">
-      <section class="intro">
-        <div class="about-content">
-          <br />
-          <br />
-          <h3>Embrace Your Life through a Book !</h3>
-          <p>
-            Imagine a single daily email, tailored to your personal reading
-            preferences, featuring the best deals on the best Kindle ebooks,
-            either completely free or at deeply discounted bargain prices.
-            Sweet. But you don't have to imagine. Just sign up for 'Online
-            Library' Home now and you'll receive your first email by tomorrow.
-            We're as tired as you are of emails stuffed with books by authors
-            we've never heard of. Ho hum, who needs them? Here at Online Library
-            Home, we're talking about bestsellers by authors you know and love,
-            with a few discoveries by emerging authors of real distinction
-            sprinkled in. Hello? Do we really mean that you can get actual
-            bestsellers for prices ranging from free to $2 or $3? Absolutely.
-            Here are a few of the well-known authors we have featured recently.
-            We're talking Grisham, Patterson, Patchett, Evanovich, Conroy,
-            Picoult, Shreve, and Grafton, and you see more of our recently
-            featured authors by checking our cool author crawl below. we've
-            grown to become the Internet's largest independently owned and
-            operated marketplace. That's more than fifteen years of doing the
-            following: -Supporting thousands of independent Sellers across the
-            world. -Providing you with our Sellers' incredible prices and
-            unbeatable selection. -Giving you the peace of mind of our proven
-            track record of satisfying customers just like you. How do we decide
-            which great book deals to show you? Easy -- we let you decide. At
-            sign-up you'll be asked to choose your personal reading preferences
-            from the most detailed list of categories anywhere, and to tell us
-            whether you want to see 12, 25, or 50 books in each email. (Most of
-            our readers choose 25 or 50, because no matter how many you select,
-            you'll only get one email a day.) Quality books at great prices,
-            delivered straight to your inbox. We hope you'll agree that it’s a
-            no-brainer for book lovers. We promise you'll always be able to find
-            plenty of good Books. We look forward to many more years together.
-          </p>
-          <br />
-          <br />
-          &nbsp;
-          <a href="pages/home.html">
-            <img src="media/images/home.png" width="50" height="50" />
-            <br />Go Home →</a
-          >
+    <!-- Landing -->
+    <section class="landing flex items-center">
+      <div class="container flex flex-between items-center">
+        <div class="text">
+          <h1>Online library for easy borrow and buy books</h1>
+          <a href="pages/home/home.html" class="c-primary btn-shape">
+            <!-- <i class="fa-solid fa-arrow-right"></i> 
+            -->
+            Explore
+            <i class="fa-solid fa-home"></i>
+          </a>
         </div>
-      </section>
-    </div>
-    <br />
-    <br />
-    <br />
-    <hr />
+        <div class="img">
+          <img src="media/images/book-landing.png" alt="Read book" />
+        </div>
+      </div>
+    </section>
+    <!-- Landing -->
     <!-- Start Footer -->
     <footer>
       <div class="container">
@@ -141,5 +112,7 @@
       </div>
     </footer>
     <!-- Footer Ended -->
+
+    <script src="js/main.js"></script>
   </body>
 </html>

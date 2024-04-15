@@ -5,6 +5,12 @@
     box-sizing: border-box ;
 }
 
+body {
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url("../../media/images/main-bg.jpg");
+}
+
 
 .container-signup{
     width: 400px;
@@ -124,11 +130,6 @@ border: 1px solid rgb(194,194,194);
 nav a.active {
     background-color: var(--primary-alt-color); 
 }
-
-
-
-
-
 
 
 footer {
