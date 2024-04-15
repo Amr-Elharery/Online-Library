@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="../../css/all.min.css" />
     <link rel="stylesheet" href="../../css/global.css" />
     <link rel="stylesheet" href="../../css/header.css" />
 
-    <title>Login</title>
+
+
+    <title>Signup</title>
   </head>
   <body>
-    <!-- Start Header -->
+
+
+<!-- Start Header -->
 <header>
   <div class="container flex flex-between items-center">
     <div class="logo">
@@ -41,17 +45,58 @@
 </header>
 <!-- End Header -->
 
-
     <div class="container-signup">
-      <form id="loginForm">
-        <h1>Login</h1>
+      <h1>Sign Up</h1>
+      <form action="#" id="signup-form" class="signup-form">
         <div class="btn-shape">
-          <input type="text" placeholder="Username" required />
+          <label>
+            <input
+              type="text"
+              name="first_name"
+              required
+              placeholder="First Name"
+            />
+          </label>
+        </div>
+        <div class="btn-shape">
+          <input
+            type="text"
+            name="last_name"
+            required
+            placeholder="Last Name"
+          />
+        </div>
+        <div class="btn-shape">
+          <input
+            type="password"
+            name="password"
+            minlength="6"
+            required
+            placeholder="Password"
+          />
+        </div>
+        <div class="btn-shape">
+          <input
+            type="password"
+            name="confirm_password"
+            minlength="6"
+            required
+            placeholder="Confirm Password"
+          />
+        </div>
+        <div class="btn-shape">
+          <input
+            type="tel"
+            required
+            placeholder="Phone Number"
+            minlength="11"
+          />
+        </div>
+        <div class="btn-shape">
+          <input type="email" name="email" required placeholder="Email" />
         </div>
 
-        <div class="btn-shape">
-          <input type="password" placeholder="Password" required />
-        </div>
+
 
         <div class="user-role-selection">
           <select id="user_role" name="user_role" required aria-placeholder="hhh">
@@ -60,27 +105,28 @@
             <option value="admin">Admin</option>
           </select>
         </div>
-
-   
         
+
         <div class="terms">
           <input type="checkbox" id="checkbox" required />
           <label for="checkbox">I agree to the <a href="#">Terms & Conditions</a></label>
         </div>
-
-        <button type="submit" class="btn-shape btn-effect">Login</button>
-
-        <div class="forget-regeister">
-          <div class="member">
-            <a href="#">Forgot Password?</a>
-            <p>Don't have an account? <a href="../signup/signup.html">Register</a></p>
-          </div>
         
-        </div>
+        <button type="submit" class="btn-effect btn-shape">Sign up</button>
+        
       </form>
+   
+      
+    
+
+        <div class="member">
+          Already a member? <a href="../login/login.html">Login Here</a>
+        </div>
+        
     </div>
 
-
+    
+ 
       <!-- Start Footer -->
       <footer>
         <div class="container">
@@ -125,6 +171,6 @@
         </div>
       </footer>
       <!-- Footer Ended -->
-      <script src="login.js"></script>
+    <script src="signup.js"></script>
   </body>
 </html>
