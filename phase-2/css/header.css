@@ -18,7 +18,7 @@ header .container .menu-icon {
     display: flex;
     z-index: 1;
     position: absolute;
-    top: 50px;
+    top: 55px;
     left: 100%;
     width: 100%;
     background-color: #fff;
@@ -59,6 +59,8 @@ header nav {
   font-weight: bold;
 }
 
-header .container .menu-icon:hover + nav {
+/* Remove because implemented by js */
+/* Please remember to implement it in each nav in pages */
+/* header .container .menu-icon:hover + nav {
   left: 0px;
-}
+} */
