@@ -1,0 +1,63 @@
+/* Container for the books */
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual book styling */
+.book {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.image img {
+  width: 100%;
+  height: 300px;
+}
+
+.image p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Buttons container */
+.buttons {
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Button styling */
+.btn-shape {
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.btn-effect:hover {
+  background-color: primary-alt-color;
+  color: white;
+}
+
+.btn-effect a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+body {
+  background-image: url("../../media/images/landing.jpg");
+}
