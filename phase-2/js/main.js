@@ -1,5 +1,5 @@
 let menu = document.getElementById("menu-icon");
-let nav = document.getElementById("toogle-nav");
+let nav = document.getElementById("toggle-nav");
 
 // Toggling navbar in mobile
 menu.addEventListener("click", () => {

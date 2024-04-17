@@ -11,7 +11,13 @@ header .container .menu-icon {
   font-weight: bold;
   cursor: pointer;
 }
+@media (min-width: 768px){
+  header nav{
+    display: block !important;
+    opacity: 1 !important;
 
+  }
+}
 @media (max-width: 767px) {
   header nav {
     padding-inline: 20px;
