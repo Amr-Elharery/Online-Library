@@ -1,0 +1,45 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../media/images/main-bg.jpg");
+}
+
+.container-contact {
+  width: 350px;
+  padding: 3rem 1rem;
+  margin: 50px auto;
+  border-radius: 20px;
+  background-color: white;
+}
+
+form input,
+textarea {
+  width: 95%;
+  border: 1px #fff solid;
+  padding: 12px 20px;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  background: #eaeff4;
+}
+
+input:focus {
+  border: 1px solid rgb(194, 194, 194);
+}
+textarea:focus {
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.button-style {
+  background: var(--primary-color);
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  width: 120px;
+  margin: auto;
+  border-radius: 30px;
+}
+button {
+  background: var(--primary-color);
+  color: #ffffff;
+  font-size: 15px;
+}
