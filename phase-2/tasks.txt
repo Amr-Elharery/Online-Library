@@ -2,7 +2,7 @@ Written on 17 April by Amr Elharery
 
 Note: For each task you should do whole component (html, css, js if needed).
 
-Attention: Please push your work in new branch (not on master directly for avoiding errors.
+Attention: Please push your work in new branch (not on master directly) for avoiding errors.
 
 Amr:
     Footer
@@ -24,4 +24,4 @@ Menna:
     more-details
 
 
-Any one need help please mention me on group.
+Any one need help please mention me in group.
