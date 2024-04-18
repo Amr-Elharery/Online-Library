@@ -2,45 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <title>User Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/all.min.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+    <link rel="stylesheet" href="home.css" />
+
+    <title>Home</title>
   </head>
   <body>
     <!-- Start Header -->
     <header>
-      <div class="container flex">
-        <nav>
-          <h1>Welcome, User</h1>
-          <ul>
+      <div class="container flex flex-between items-center">
+        <div class="logo">
+          <a href="../../index.html">
+            <i class="fa-solid fa-book c-primary"></i>
+            MyBook
+          </a>
+        </div>
+        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+        <nav id="toogle-nav">
+          <ul class="flex">
             <li>
-              <a href="#" class="btn-shape btn-effect">Home</a>
+              <a href="../home/home.html" class="btn-shape btn-effect">Home</a>
             </li>
             <li>
-              <a href="../home.html" class="btn-shape btn-effect">Log out</a>
-            </li>
-            <li>
-              <a href="borrowed-books.html" class="btn-shape btn-effect"
-                >Borrowed Books</a
+              <a href="../login/login.html" class="btn-shape btn-effect"
+                >Login</a
               >
             </li>
             <li>
-              <div class="search flex">
-                <input
-                  type="search"
-                  name="search-book"
-                  placeholder="Type Author, Title, Category"
-                />
-                <button class="btn-shape btn-effect">
-                  <img
-                    src="../../media/images/search.png"
-                    width="10"
-                    height="10"
-                  />
-                </button>
-              </div>
+              <a href="../signup/signup.html" class="btn-shape btn-effect"
+                >Sign up</a
+              >
+            </li>
+            <li>
+              <a
+                href="../contact-us/contact-us.html"
+                class="btn-shape btn-effect"
+                >Contact</a
+              >
+            </li>
+            <!-- added a search container here -->
+            <li>
+              <input type="text" placeholder="Search..." />
+              <button type="submit"><i class="fas fa-search"></i></button>
             </li>
           </ul>
         </nav>
@@ -50,12 +56,9 @@
     <!--    Content    -->
     <div class="content">
       <div class="container">
-        <br />
-        <br />
-        <br />
-        <div class="books grid">
+        <div class="books-container">
           <!-- Books -->
-          <div class="book1">
+          <div class="book">
             <div class="image">
               <img
                 src="../../media/books/1.png"
@@ -63,30 +66,30 @@
                 width="250"
                 height="300"
               />
-              <p><b>&nbsp; &nbsp; Engineering Optical Networks</b></p>
+              <p>Engineering Optical Networks</p>
             </div>
             <div class="buttons">
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
                 <a
-                  href="https://printige.net/product/engineering-optical-networks/"
+                  href="https://printige.net/product/atomic-habits/"
                   target="_blank"
                 >
-                  Buy
+                  <i class="fas fa-shopping-cart"></i> Buy
                 </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="borrowed-books.html">Borrow</a>
+                <a href="../login/login.html">
+                  <i class="fas fa-handshake"></i> Borrow
+                </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="more-details.html#1" target="_blank"> More Details </a>
+                <a href="../login/login.html">
+                  <i class="fas fa-info-circle"></i> More Details
+                </a>
               </button>
             </div>
           </div>
-          <br />
-          <div class="book2">
+          <div class="book">
             <div class="image">
               <img
                 src="../../media/books/2.jpg"
@@ -94,35 +97,30 @@
                 width="250"
                 height="300"
               />
-              <p>
-                <b>
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  &nbsp; Clean Code</b
-                >
-              </p>
+              <p>Clean Code</p>
             </div>
             <div class="buttons">
-              &nbsp;
               <button class="btn-shape btn-effect">
                 <a
-                  href="https://printige.net/product/clean-code/"
+                  href="https://printige.net/product/atomic-habits/"
                   target="_blank"
                 >
-                  Buy
+                  <i class="fas fa-shopping-cart"></i> Buy
                 </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="borrowed-books.html">Borrowed</a>
+                <a href="../login/login.html">
+                  <i class="fas fa-handshake"></i> Borrow
+                </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="more-details.html#2" target="_blank"> More Details </a>
+                <a href="../login/login.html">
+                  <i class="fas fa-info-circle"></i> More Details
+                </a>
               </button>
             </div>
           </div>
-          <br />
-          <div class="book3">
+          <div class="book">
             <div class="image">
               <img
                 src="../../media/books/3.jpg"
@@ -130,30 +128,30 @@
                 width="250"
                 height="300"
               />
-              <p><b>&nbsp; &nbsp; Essential Math for Data Science</b></p>
+              <p>Essential Math for Data Science</p>
             </div>
             <div class="buttons">
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
                 <a
-                  href="https://printige.net/product/essential-math-for-data-science/"
+                  href="https://printige.net/product/atomic-habits/"
                   target="_blank"
                 >
-                  Buy
+                  <i class="fas fa-shopping-cart"></i> Buy
                 </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="borrowed-books.html">Borrow</a>
+                <a href="../login/login.html">
+                  <i class="fas fa-handshake"></i> Borrow
+                </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="more-details.html#3" target="_blank"> More Details </a>
+                <a href="../login/login.html">
+                  <i class="fas fa-info-circle"></i> More Details
+                </a>
               </button>
             </div>
           </div>
-          <br />
-          <div class="book4">
+          <div class="book">
             <div class="image">
               <img
                 src="../../media/books/4.jpg"
@@ -161,35 +159,30 @@
                 width="250"
                 height="300"
               />
-              <p>
-                <b>
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-                  Atomic Habits</b
-                >
-              </p>
+              <p>Atomic Habits</p>
             </div>
             <div class="buttons">
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
                 <a
                   href="https://printige.net/product/atomic-habits/"
                   target="_blank"
                 >
-                  Buy
+                  <i class="fas fa-shopping-cart"></i> Buy
                 </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="borrowed-books.html">Borrow</a>
+                <a href="../login/login.html">
+                  <i class="fas fa-handshake"></i> Borrow
+                </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="more-details.html#4" target="_blank"> More Details </a>
+                <a href="../login/login.html">
+                  <i class="fas fa-info-circle"></i> More Details
+                </a>
               </button>
             </div>
           </div>
-          <br />
-          <div class="book5">
+          <div class="book">
             <div class="image">
               <img
                 src="../../media/books/5.jpg"
@@ -197,37 +190,29 @@
                 width="250"
                 height="300"
               />
-              <p>
-                <b
-                  >&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Thinking With
-                  Type</b
-                >
-              </p>
+              <p>Thinking With Type</p>
             </div>
             <div class="buttons">
-              &nbsp;
               <button class="btn-shape btn-effect">
                 <a
-                  href="https://printige.net/product/thinking-with-type/"
+                  href="https://printige.net/product/atomic-habits/"
                   target="_blank"
                 >
-                  Buy
+                  <i class="fas fa-shopping-cart"></i> Buy
                 </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="borrowed-books.html">Borrowed</a>
+                <a href="../login/login.html">
+                  <i class="fas fa-handshake"></i> Borrow
+                </a>
               </button>
-              &nbsp; &nbsp;
               <button class="btn-shape btn-effect">
-                <a href="more-details.html#5" target="_blank"> More Details </a>
+                <a href="../login/login.html">
+                  <i class="fas fa-info-circle"></i> More Details
+                </a>
               </button>
             </div>
           </div>
-          <br />
-          <br />
-          <br />
-          <hr />
         </div>
       </div>
     </div>
@@ -275,5 +260,6 @@
       </div>
     </footer>
     <!-- Footer Ended -->
+    <script src="home.js"></script>
   </body>
 </html>
