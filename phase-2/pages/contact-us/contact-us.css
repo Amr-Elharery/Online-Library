@@ -1,0 +1,55 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../media/images/main-bg.jpg");
+}
+
+.container-contact {
+  width: 350px;
+  padding: 3rem 1rem;
+  margin: 50px auto;
+  border-radius: 20px;
+  background-color: white;
+}
+
+form input,
+textarea {
+  width: 95%;
+  border: 1px #fff solid;
+  padding: 12px 20px;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  background: #eaeff4;
+}
+
+input:focus {
+  border: 1px solid rgb(194, 194, 194);
+}
+textarea:focus {
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.button-style {
+  text-align: center;
+  padding-top: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: var(--primary-alt-color);
+  transition: var(--primary-transition);
+}
+button {
+  background: var(--primary-color);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  width: 100px;
+}
+
+/* Style for the active link */
+nav a.active {
+  background-color: var(--primary-alt-color);
+}
