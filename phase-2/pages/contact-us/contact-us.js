@@ -1,10 +1,3 @@
-document
-  .getElementById("signup-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    window.location.href = "../login/login.html";
-  });
-
 var currentPageUrl = window.location.href;
 
 function highlightActiveLink() {

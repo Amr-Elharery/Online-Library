@@ -6,6 +6,10 @@
   padding: 20px;
 }
 
+/* Style for the active link */
+nav a.active {
+  background-color: var(--primary-alt-color);
+}
 /* Individual book styling */
 .book {
   border: 1px solid #ddd;
@@ -67,9 +71,4 @@ body {
 }
 h3 {
   font-weight: bold;
-}
-
-/* Style for the active link */
-nav a.active {
-  background-color: var(--primary-alt-color);
 }
