@@ -53,10 +53,6 @@
   color: white;
 }
 
-.btn-effect:active {
-  background-color: primary-alt-color;
-}
-
 .btn-effect a {
   text-decoration: none;
   color: inherit;
@@ -71,4 +67,9 @@ body {
 }
 h3 {
   font-weight: bold;
+}
+
+/* Style for the active link */
+nav a.active {
+  background-color: var(--primary-alt-color);
 }
