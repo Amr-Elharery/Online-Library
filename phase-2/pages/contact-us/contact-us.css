@@ -30,35 +30,21 @@ textarea:focus {
 }
 
 .button-style {
-  background: var(--primary-color);
-  padding: 10px;
   text-align: center;
-  font-size: 18px;
-  width: 120px;
-  margin: auto;
-  border-radius: 30px;
-}
-.button-style:hover {
-  background: var(--primary-alt-color);
-  transition: var(--primary-transition);
-  -webkit-transition: var(--primary-transition);
-  -moz-transition: var(--primary-transition);
-  -ms-transition: var(--primary-transition);
-  -o-transition: var(--primary-transition);
+  padding-top: 10px;
 }
 
 button:hover {
   cursor: pointer;
   background: var(--primary-alt-color);
   transition: var(--primary-transition);
-  -webkit-transition: var(--primary-transition);
-  -moz-transition: var(--primary-transition);
-  -ms-transition: var(--primary-transition);
-  -o-transition: var(--primary-transition);
 }
 button {
   background: var(--primary-color);
   color: #ffffff;
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  width: 100px;
 }
