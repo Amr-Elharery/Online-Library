@@ -38,8 +38,27 @@ textarea:focus {
   margin: auto;
   border-radius: 30px;
 }
+.button-style:hover {
+  background: var(--primary-alt-color);
+  transition: var(--primary-transition);
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
+
+button:hover {
+  cursor: pointer;
+  background: var(--primary-alt-color);
+  transition: var(--primary-transition);
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
 button {
   background: var(--primary-color);
   color: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: bold;
 }

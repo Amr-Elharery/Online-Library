@@ -37,14 +37,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  padding-top: 5px;
 }
 
 /* Button styling */
 .btn-shape {
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   color: #fff;
