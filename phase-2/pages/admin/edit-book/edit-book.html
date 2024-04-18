@@ -3,86 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="stylesheet" href="../../../css/all.min.css" />
+    <link rel="stylesheet" href="../../../css/global.css" />
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="edit-book.css" />
+    
     <title>Edit Book</title>
   </head>
   <body>
     <!-- Start Header -->
     <header>
-      <div class="container flex">
-        <nav>
-          <h1>Welcome, Admin</h1>
-          <ul>
+      <div class="container flex flex-between items-center">
+        <div class="logo">
+          <a href="#">
+            <i class="fa-solid fa-book c-primary"></i>
+            MyBook
+          </a>
+        </div>
+        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+        <nav id="toggle-nav">
+          <ul class="flex">
             <li>
-              <a href="admin-home.html" class="btn-shape btn-effect">Home</a>
+              <a href="../admin-home/admin-home.html" class="btn-shape btn-effect"
+                >Home</a
+              >
             </li>
             <li>
-              <a href="../home.html" class="btn-shape btn-effect">Log out</a>
+              <a href="../../login/login.html" class="btn-shape btn-effect"
+                >Log out</a
+              >
             </li>
             <li>
-              <a href="add-book.html" class="btn-shape btn-effect">Add Book</a>
-            </li>
-            <li>
-              <div class="search flex">
-                <input
-                  type="search"
-                  name="search-book"
-                  placeholder="Type Author, Title, Category"
-                />
-                <button class="btn-shape btn-effect">
-                  <img
-                    src="../../media/images/search.png"
-                    width="10"
-                    height="10"
-                  />
-                </button>
-              </div>
+              <a href="../../admin/add-book/add-book.html" class="btn-shape btn-effect"
+                >Add Book</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <!-- End Header -->
-    <br />
-    <br /><br />
 
-    <div class="container flex">
-      <h3>Edit Book Details:</h3>
 
-      <label for="book-name-selection">Choose a Book to edit: </label>
-      <select name="book" id="book-name-selection">
-        <option>Engineering Optical Networks</option>
-        <option>Clean Code</option>
-        <option>Essential Math for Data Science</option>
-        <option>Atomic Habits</option>
-        <option>Thinking With Type</option>
-      </select>
-      <br />
-      <br />
+  <!-- content area  -->
 
-      <form>
-        <label for="book-name">Book ID:</label>
+    <div class="content">
+      <h1>Edit Book Details</h1>
+
+     
+      <form class="edit-form">
+        <div class="form-group">
+          <label for="book-name">Book ID:</label>
         <input
           type="text"
-          id="book-name"
+          id="book-id"
           name="book_name"
-          placeholder="Type Book ID"
-        /><br /><br />
-        <label for="book-name">Book Name:</label>
-        <input
-          type="text"
-          id="book-name"
-          name="book_name"
-          placeholder="Type Book Name"
-        /><br /><br />
+          placeholder="Type Book ID"/>
+        </div>
+        
+        
+        <div class="form-group">
+          <label for="book-name">Book Name:</label>
+          <input
+            type="text"
+            id="book-name"
+            name="book_name"
+            placeholder="Type Book Name"
+          />
+        </div>
 
-        <label for="author">Author:</label>
+        <div class="form-group">
+          <label for="author">Author:</label>
         <input
           type="text"
           id="author"
           name="author"
           placeholder="Type Author"
-        /><br /><br />
+        />
+        </div>
+        
+        <div class="form-group">
 
+        </div>
         <label for="category">Category:</label>
         <input
           type="text"
@@ -91,27 +95,23 @@
           placeholder="Type Book category"
         /><br /><br />
 
-        <label for="description">Description:</label><br />
-        <textarea id="description" name="description">
-Enter description...</textarea
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" placeholder="Enter description...">
+</textarea
         ><br /><br />
 
-        <button class="btn-shape" type="submit">
-          <a href="admin-home.html">Update Book</a>
-        </button>
+        <button class="btn-shape" id="update-button" type="submit"> Update Book </button>
+
       </form>
     </div>
-    <br />
-    <br />
-    <br />
-    <hr />
+
     <!-- Start Footer -->
-    <footer>
+    <footer >
       <div class="container">
         <h3>Follow Us</h3>
         <a href="https://facebook.com" target="_blank">
           <img
-            src="../../media/images/facebook.png"
+            src="../../../media/images/facebook.png"
             alt="Facebook"
             width="33"
             height="33"
@@ -119,7 +119,7 @@ Enter description...</textarea
         </a>
         <a href="https://instagram.com" target="_blank">
           <img
-            src="../../media/images/instagram.png"
+            src="../../../media/images/instagram.png"
             alt="Instagram"
             width="33"
             height="33"
@@ -127,18 +127,18 @@ Enter description...</textarea
         </a>
         <a href="https://tiktok.com" target="_blank">
           <img
-            src="../../media/images/tiktok.png"
+            src="../../../media/images/tiktok.png"
             alt="Tiktok"
             width="33"
             height="33"
           />
         </a>
         <a href="https://x.com" target="_blank">
-          <img src="../../media/images/x.png" alt="X" width="33" height="33" />
+          <img src="../../../media/images/x.png" alt="X" width="33" height="33" />
         </a>
         <a href="https://linkedin.com" target="_blank">
           <img
-            src="../../media/images/linkedin.png"
+            src="../../../media/images/linkedin.png"
             alt="LinkedIn"
             width="33"
             height="33"
@@ -149,5 +149,8 @@ Enter description...</textarea
       </div>
     </footer>
     <!-- Footer Ended -->
+
+    <script src="edit-book.js"></script>
+    <script src="../../../js/main.js"></script>
   </body>
 </html>

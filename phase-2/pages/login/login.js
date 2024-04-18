@@ -5,9 +5,9 @@ var selectedRole = document.getElementById('user_role').value;
 
 
 if (selectedRole === 'user') {
-    window.location.href = '../user/user-home.html';
+    window.location.href = '../user/user-home/user-home.html';
 } else if (selectedRole === 'admin') {
-    window.location.href = '../admin/admin-home.html';
+    window.location.href = '../admin/admin-home/admin-home.html';
 }
 });
 
