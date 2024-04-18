@@ -1,0 +1,105 @@
+/* Container for the books */
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Style for the active link */
+nav a.active {
+  background-color: var(--primary-alt-color);
+}
+/* Individual book styling */
+.book {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.image img {
+  width: 100%;
+  height: 300px;
+}
+.book img:hover {
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}
+.image p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+/* Button styling */
+.btn-shape {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.btn-effect:hover {
+  background-color: primary-alt-color;
+  color: white;
+}
+
+.btn-effect a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+body {
+  background-image: url("../../media/images/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h3 {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-top: -10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--primary-radius);
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -8px;
+  padding: 7.5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-top-right-radius: var(--primary-radius);
+  border-bottom-right-radius: var(--primary-radius);
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-alt-color);
+  transition: var(--primary-transition);
+}
+
+.fa-search {
+  font-size: 18px;
+}
