@@ -88,6 +88,14 @@ textarea {
   align-items: center;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
 .show-mobile {
   display: none;
 }
