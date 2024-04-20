@@ -1,137 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box ;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../../media/images/main-bg.jpg");
-    }
-
-
-.container-signup{
-    width: 400px;
-    padding: 2rem 1rem;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
-}
-h1{
-    font-size: 2rem;
-    color: #07001f;
-    margin-bottom: 1.2rem;
-}
-form input{
-    width: 92%;
-    outline: none;
-    border: 1px #fff solid;
-    padding: 12px 20px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    background: #eaeff4 ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../media/images/main-bg.jpg");
 }
 
-button{
-    font-size: 1rem;
-    margin-top: 1.9rem;
-    width: 90%;
-    background:var(--primary-color);
-    color: #fff;
+.container-signup {
+  width: 400px;
+  padding: 2rem 1rem;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-input:focus{
-    border: 1px solid rgb(194,194,194);
+h1 {
+  font-size: 2rem;
+  color: #07001f;
+  margin-bottom: 1.2rem;
 }
-
-
-.terms{
-    margin-top: 0.2rem;
-    padding-top: 20px;
-}
-
-.terms input{
-    height: 1em;
-    width: 1em;
-    vertical-align: middle;
-    cursor: pointer;
-}
-.terms label{
-    font-size: 0.7rem;
-    margin-right: 100px;
+form input {
+  width: 92%;
+  outline: none;
+  border: 1px #fff solid;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: #eaeff4;
 }
 
-.terms a{
-    color: var(--primary-color);
-    text-decoration: none;
+button {
+  font-size: 1rem;
+  margin-top: 1.9rem;
+  width: 90%;
+  background: var(--primary-color);
+  color: #fff;
+}
+input:focus {
+  border: 1px solid rgb(194, 194, 194);
 }
 
-.terms input[type="checkbox"]
-{
-    margin-top: 10px;
+.terms {
+  margin-top: 0.2rem;
+  padding-top: 20px;
 }
 
-
-.member{
-    font-size: 0.8rem;
-    margin-top: 1.4rem;
-    color: #636363;
+.terms input {
+  height: 1em;
+  width: 1em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.terms label {
+  font-size: 0.7rem;
+  margin-right: 100px;
 }
 
-.member a{
-    color: var(--primary-color);
-    text-decoration: none;
+.terms a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
+.terms input[type="checkbox"] {
+  margin-top: 10px;
+}
 
+.member {
+  font-size: 0.8rem;
+  margin-top: 1.4rem;
+  color: #636363;
+}
+
+.member a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
 
 .user-role-selection select {
-    width: 83%;
-    padding: 10px;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    background-color: #eaeff4;
-    font-size: 16px;
+  width: 83%;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  background-color: #eaeff4;
+  font-size: 16px;
 }
-
-
 
 /* Style when the select is focused */
 .user-role-selection select:focus {
-border: 1px solid rgb(194,194,194);
+  border: 1px solid rgb(194, 194, 194);
 }
 
-form button[type = "submit"]
-{
-    width: 83%;
-    border: 1px #fff solid;
-    padding: 12px 20px;
-    border-radius: 20px;
+form button[type="submit"] {
+  width: 83%;
+  border: 1px #fff solid;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
 }
-
 
 /* Style for the active link */
 nav a.active {
-    background-color: var(--primary-alt-color); 
+  background-color: var(--primary-alt-color);
 }
-
 
 footer {
-    position: absolute;
-    left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
 }
 footer mark {
-    padding: 8px 30px;
-    border-radius: 7px;
+  padding: 8px 30px;
+  border-radius: 7px;
 }
 footer a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: #003;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #003;
 }
