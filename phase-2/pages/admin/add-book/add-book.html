@@ -10,51 +10,53 @@
     <link rel="stylesheet" href="../../../css/header.css" />
     <link rel="stylesheet" href="../../../css/footer.css" />
     <link rel="stylesheet" href="add-book.css" />
-    
   </head>
   <body>
-   <!-- Start Header -->
-   <header>
-    <div class="container flex flex-between items-center">
-      <div class="logo">
-        <a href="#">
-          <i class="fa-solid fa-book c-primary"></i>
-          MyBook
-        </a>
+    <!-- Start Header -->
+    <header>
+      <div class="container flex flex-between items-center">
+        <div class="logo">
+          <a href="#">
+            <i class="fa-solid fa-book c-primary"></i>
+            MyBook
+          </a>
+        </div>
+        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+        <nav id="toggle-nav">
+          <ul class="flex">
+            <li>
+              <a
+                href="../admin-home/admin-home.html"
+                class="btn-shape btn-effect"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="../../login/login.html" class="btn-shape btn-effect"
+                >Log out</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../admin/add-book/add-book.html"
+                class="btn-shape btn-effect"
+                >Add Book</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-      <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
-      <nav id="toggle-nav">
-        <ul class="flex">
-          <li>
-            <a href="../admin-home/admin-home.html" class="btn-shape btn-effect"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a href="../../login/login.html" class="btn-shape btn-effect"
-              >Log out</a
-            >
-          </li>
-          <li>
-            <a href="../../admin/add-book/add-book.html" class="btn-shape btn-effect"
-              >Add Book</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- End Header -->
+    </header>
+    <!-- End Header -->
 
     <div class="content">
       <h1>Add A New Book</h1>
       <form class="add-form" id="add-form">
-
         <div class="form-group">
           <label for="id">Book ID:</label><br />
-          <input type="text" id="id" name="id" required /><br /> <br>
+          <input type="text" id="id" name="id" required /><br />
+          <br />
         </div>
-
 
         <div class="form-group">
           <label for="book_name">Book Name:</label><br />
@@ -68,7 +70,7 @@
 
         <div class="form-group">
           <label for="author">Author:</label><br />
-          <input type="text" id="author" name="author" required /><br /><br>
+          <input type="text" id="author" name="author" required /><br /><br />
         </div>
 
         <div class="form-group">
@@ -78,7 +80,7 @@
             id="category"
             name="category"
             required
-          /><br /><br>
+          /><br /><br />
         </div>
 
         <div class="form-group">
@@ -89,11 +91,10 @@
             rows="4"
             required
           ></textarea
-          ><br /><br>
+          ><br /><br />
         </div>
 
         <button type="submit" class="btn-shape" id="add-button">Add</button>
-
       </form>
     </div>
     <div class="book-container" id="bookContainer"></div>

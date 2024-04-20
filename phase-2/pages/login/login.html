@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css" />
     <link rel="stylesheet" href="../../css/all.min.css" />
     <link rel="stylesheet" href="../../css/global.css" /> 
     <link rel="stylesheet" href="../../css/header.css" />
@@ -11,44 +11,43 @@
     <title>Login</title>
   </head>
   <body>
-   <!-- Start Header -->
- <header>
-  <div class="container flex flex-between items-center">
-    <div class="logo">
-      <a href="#">
-        <i class="fa-solid fa-book c-primary"></i>
-        MyBook
-      </a>
-    </div>
-    <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
-    <nav id="toogle-nav">
-      <ul class="flex">
-        <li>
-          <a href="../home/home.html" class="btn-shape btn-effect"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a href="../login/login.html" class="btn-shape btn-effect">Login</a>
-        </li>
-        <li>
-          <a href="../signup/signup.html" class="btn-shape btn-effect"
-            >Sign up</a
-          >
-        </li>
-        <li>
-          <a
-            href="../contact-us/contact-us.html"
-            class="btn-shape btn-effect"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<!-- End Header -->
-
+    <!-- Start Header -->
+    <header>
+      <div class="container flex flex-between items-center">
+        <div class="logo">
+          <a href="#">
+            <i class="fa-solid fa-book c-primary"></i>
+            MyBook
+          </a>
+        </div>
+        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+        <nav id="toogle-nav">
+          <ul class="flex">
+            <li>
+              <a href="../home/home.html" class="btn-shape btn-effect">Home</a>
+            </li>
+            <li>
+              <a href="../login/login.html" class="btn-shape btn-effect"
+                >Log In</a
+              >
+            </li>
+            <li>
+              <a href="../signup/signup.html" class="btn-shape btn-effect"
+                >Sign Up</a
+              >
+            </li>
+            <li>
+              <a
+                href="../contact-us/contact-us.html"
+                class="btn-shape btn-effect"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
 
     <div class="container-signup">
       <form id="loginForm">
@@ -62,18 +61,23 @@
         </div>
 
         <div class="user-role-selection">
-          <select id="user_role" name="user_role" required aria-placeholder="hhh">
-            <option value="disabled" disabled selected> Select Role</option>
+          <select
+            id="user_role"
+            name="user_role"
+            required
+            aria-placeholder="hhh"
+          >
+            <option value="disabled" disabled selected>Select Role</option>
             <option value="user">User</option>
             <option value="admin">Admin</option>
           </select>
         </div>
 
-   
-        
         <div class="terms">
           <input type="checkbox" id="checkbox" required />
-          <label for="checkbox">I agree to the <a href="#">Terms & Conditions</a></label>
+          <label for="checkbox"
+            >I agree to the <a href="#">Terms & Conditions</a></label
+          >
         </div>
 
         <button type="submit" class="btn-shape btn-effect">Login</button>
@@ -81,9 +85,11 @@
         <div class="forget-regeister">
           <div class="member">
             <a href="#">Forgot Password?</a>
-            <p>Don't have an account? <a href="../signup/signup.html">Register</a></p>
+            <p>
+              Don't have an account?
+              <a href="../signup/signup.html">Register</a>
+            </p>
           </div>
-        
         </div>
       </form>
     </div>

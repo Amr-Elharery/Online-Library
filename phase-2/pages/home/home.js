@@ -31,3 +31,8 @@ menu.addEventListener("click", () => {
     }, 100);
   }
 });
+
+function showAlert() {
+  alert("Sorry but you have to Log In first :(");
+  window.location.href = "../login/login.html";
+}
