@@ -31,3 +31,11 @@ menu.addEventListener("click", () => {
     }, 100);
   }
 });
+
+function borrow() {
+  alert("The Book has been added to your borrowed-books page go check it :)");
+  window.location.href = "../borrowed-books/borrowed-books.html";
+}
+function borrowed() {
+  alert("Sorry but this book is borrowed by another student for now :(");
+}
