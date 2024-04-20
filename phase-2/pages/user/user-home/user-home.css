@@ -10,6 +10,7 @@
 nav a.active {
   background-color: var(--primary-alt-color);
 }
+
 /* Individual book styling */
 .book {
   border: 1px solid #ddd;
@@ -64,7 +65,7 @@ nav a.active {
 }
 
 body {
-  background-image: url("../../media/images/main-bg.jpg");
+  background-image: url("../../../media/images/main-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

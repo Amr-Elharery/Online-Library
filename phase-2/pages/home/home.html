@@ -249,6 +249,13 @@
       </div>
     </footer>
     <!-- Footer Ended -->
+    <script>
+      // Manipulate browser history
+      history.pushState(null, null, location.href);
+      window.onpopstate = function () {
+        history.go(1);
+      };
+    </script>
     <script src="home.js"></script>
   </body>
 </html>
