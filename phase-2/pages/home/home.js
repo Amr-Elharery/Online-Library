@@ -33,6 +33,6 @@ menu.addEventListener("click", () => {
 });
 
 function showAlert() {
-  alert("Sorry but you have to Login first :(");
+  alert("Sorry but you have to Log In first :(");
   window.location.href = "../login/login.html";
 }
