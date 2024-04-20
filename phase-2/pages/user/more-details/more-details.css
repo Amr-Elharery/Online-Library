@@ -1,0 +1,62 @@
+.book {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  height: 370px;
+  padding: 3rem 1rem;
+  margin-bottom: 100px;
+  border-radius: 20px;
+  background-color: rgb(241, 241, 241);
+}
+
+#name {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.description p {
+  font-size: 18px;
+  margin: 15px;
+}
+
+body {
+  background-image: url("../../../media/images/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-top: -10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--primary-radius);
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -8px;
+  padding: 7.5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-top-right-radius: var(--primary-radius);
+  border-bottom-right-radius: var(--primary-radius);
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-alt-color);
+  transition: var(--primary-transition);
+}
+
+.fa-search {
+  font-size: 18px;
+}
