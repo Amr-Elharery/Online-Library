@@ -90,3 +90,8 @@
   -o-border-radius: var(--primary-radius);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Search */
+.searchBtn {
+  color: #fff;
+}

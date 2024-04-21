@@ -1,10 +1,10 @@
 let booksHolder = document.getElementById('booksHolder');
 let adminBooks = JSON.parse(localStorage.getItem('books')) || [];
 
-function renderBooks() {
+function renderBooks(books) {
   booksHolder.innerHTML = '';
-  if (adminBooks.length > 0) {
-    adminBooks.forEach((book) => {
+  if (books.length > 0) {
+    books.forEach((book) => {
       let bookHolder = document.createElement('div');
       bookHolder.classList.add('book');
       bookHolder.innerHTML = `
@@ -43,7 +43,7 @@ function renderBooks() {
   }
 }
 
-renderBooks();
+renderBooks(adminBooks);
 
 function handleDeleteBook(id) {
   let index = adminBooks.findIndex((book) => book.id === id);
@@ -134,3 +134,21 @@ renderStoredBooksBtn.addEventListener('click', () => {
 
   renderBooks();
 });
+
+// Handle search
+let searchInput = document.getElementById('searchBar');
+let searchBtn = document.getElementById('searchBtn');
+function searchBooks() {
+  let searchValue = searchInput.value.toLowerCase();
+  let filteredBooks = adminBooks.filter((book) => {
+    return (
+      book.name.toLowerCase().includes(searchValue) ||
+      book.author.toLowerCase().includes(searchValue) ||
+      book.category.toLowerCase().includes(searchValue)
+    );
+  });
+  renderBooks(filteredBooks);
+}
+
+searchBtn.addEventListener('click', searchBooks);
+searchInput.addEventListener('keyup', searchBooks);
