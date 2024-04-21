@@ -6,58 +6,53 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
+    <link rel="stylesheet" href="../../../css/all.min.css" />
+    <link rel="stylesheet" href="../../../css/global.css" />
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/footer.css" />
+    <link rel="stylesheet" href="./admin-home.css" />
     <title>Admin Home</title>
   </head>
   <body>
     <!-- Start Header -->
     <header>
-      <div class="container flex">
-        <nav>
-          <h1>Welcome, Admin</h1>
-          <ul>
+      <div class="container flex flex-between items-center">
+        <div class="logo">
+          <a href="#">
+            <i class="fa-solid fa-book c-primary"></i>
+            MyBook
+          </a>
+        </div>
+        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+        <nav id="toggle-nav">
+          <ul class="flex">
             <li>
-              <a href="#" class="btn-shape btn-effect">Home</a>
+              <a href="../../home/home.html" class="btn-shape btn-effect"
+                >Signout</a
+              >
             </li>
             <li>
-              <a href="../home.html" class="btn-shape btn-effect">Log out</a>
-            </li>
-            <li>
-              <a href="add-book.html" class="btn-shape btn-effect">Add Book</a>
-            </li>
-            <li>
-              <div class="search flex">
-                <input
-                  type="search"
-                  name="search-book"
-                  placeholder="Type Author, Title, Category"
-                />
-                <button class="btn-shape btn-effect">
-                  <img
-                    src="../../media/images/search.png"
-                    width="10"
-                    height="10"
-                  />
-                </button>
-              </div>
+              <a
+                href="../../contact-us/contact-us.html"
+                class="btn-shape btn-effect"
+                >Contact Us</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <!-- End Header -->
-    
+
     <!--    Content    -->
     <div class="content">
       <div class="container">
-        <br />
-        <br />
-        <br />
-        <div class="books grid">
+        <div class="books">
           <!-- Books -->
-          <div class="book1">
+          <div class="book" id="book-1">
             <div class="image">
               <img
-                src="../../media/books/1.png"
+                src="../../../media/books/1.png"
                 alt="Image of book"
                 width="250"
                 height="300"
@@ -74,11 +69,10 @@
               &nbsp; &nbsp; Avaliable
             </div>
           </div>
-          <br />
-          <div class="book2">
+          <div class="book" id="book-2">
             <div class="image">
               <img
-                src="../../media/books/2.jpg"
+                src="../../../media/books/2.jpg"
                 alt="Image of book"
                 width="250"
                 height="300"
@@ -100,11 +94,10 @@
               &nbsp; &nbsp; Not Avaliable
             </div>
           </div>
-          <br />
-          <div class="book3">
+          <div class="book" id="book-3">
             <div class="image">
               <img
-                src="../../media/books/3.jpg"
+                src="../../../media/books/3.jpg"
                 alt="Image of book"
                 width="250"
                 height="300"
@@ -121,11 +114,10 @@
               &nbsp; &nbsp; Avaliable
             </div>
           </div>
-          <br />
-          <div class="book4">
+          <div class="book" id="book-4">
             <div class="image">
               <img
-                src="../../media/books/4.jpg"
+                src="../../../media/books/4.jpg"
                 alt="Image of book"
                 width="250"
                 height="300"
@@ -147,11 +139,10 @@
               &nbsp; &nbsp; Avaliable
             </div>
           </div>
-          <br />
-          <div class="book5">
+          <div class="book" id="book-5">
             <div class="image">
               <img
-                src="../../media/books/5.jpg"
+                src="../../../media/books/5.jpg"
                 alt="Image of book"
                 width="250"
                 height="300"
@@ -173,61 +164,40 @@
               &nbsp; &nbsp; Not Avaliable
             </div>
           </div>
-          <br />
-          <br />
-          <br />
-          <hr />
-          <!-- Start Footer -->
-          <footer>
-            <div class="container">
-              <h3>Follow Us</h3>
-              <a href="https://facebook.com" target="_blank">
-                <img
-                  src="../../media/images/facebook.png"
-                  alt="Facebook"
-                  width="33"
-                  height="33"
-                />
-              </a>
-              <a href="https://instagram.com" target="_blank">
-                <img
-                  src="../../media/images/instagram.png"
-                  alt="Instagram"
-                  width="33"
-                  height="33"
-                />
-              </a>
-              <a href="https://tiktok.com" target="_blank">
-                <img
-                  src="../../media/images/tiktok.png"
-                  alt="Tiktok"
-                  width="33"
-                  height="33"
-                />
-              </a>
-              <a href="https://x.com" target="_blank">
-                <img
-                  src="../../media/images/x.png"
-                  alt="X"
-                  width="33"
-                  height="33"
-                />
-              </a>
-              <a href="https://linkedin.com" target="_blank">
-                <img
-                  src="../../media/images/linkedin.png"
-                  alt="LinkedIn"
-                  width="33"
-                  height="33"
-                />
-              </a>
-              <br />
-              &copy; 2024 Online Library. All rights reserved.
-            </div>
-          </footer>
-          <!-- Footer Ended -->
         </div>
       </div>
     </div>
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="container flex flex-col">
+        <div class="up flex flex-between items-center">
+          <h2>Follow Us</h2>
+          <div class="links flex">
+            <a href="https://facebook.com" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://x.com" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="down flex justify-center items-center">
+          &copy; 2024 <a href="#"><span class="c-primary">MyBook.</span></a> All
+          rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Ended -->
   </body>
 </html>
