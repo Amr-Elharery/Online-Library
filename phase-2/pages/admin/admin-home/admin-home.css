@@ -42,3 +42,21 @@
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
+
+.books .book .book-info {
+  padding: 10px;
+  gap: 15px;
+  color: #444;
+}
+
+.books .book .book-info .book-title,
+.books .book .book-info .book-author,
+.books .book .book-info .book-category {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+.books .book .book-info .buttons button,
+.books .book .book-info .buttons button a {
+  cursor: pointer;
+  color: #fff;
+}
