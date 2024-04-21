@@ -1,51 +1,51 @@
 var currentPageUrl = window.location.href;
 
 function highlightActiveLink() {
-  var links = document.querySelectorAll('nav a');
+  var links = document.querySelectorAll("nav a");
 
   links.forEach(function (link) {
     if (link.href === currentPageUrl) {
-      link.classList.add('active');
+      link.classList.add("active");
     }
   });
 }
 
 highlightActiveLink();
 
-let menu = document.getElementById('menu-icon');
-let nav = document.getElementById('toogle-nav');
+let menu = document.getElementById("menu-icon");
+let nav = document.getElementById("toogle-nav");
 
 // Toggling navbar in mobile
-menu.addEventListener('click', () => {
-  if (nav.style.left != '0px') {
-    nav.style.display = 'flex';
+menu.addEventListener("click", () => {
+  if (nav.style.left != "0px") {
+    nav.style.display = "flex";
     setTimeout(() => {
-      nav.style.left = '0px';
-      nav.style.opacity = '1';
+      nav.style.left = "0px";
+      nav.style.opacity = "1";
     }, 100);
   } else {
-    nav.style.left = '100%';
-    nav.style.opacity = '0';
+    nav.style.left = "100%";
+    nav.style.opacity = "0";
     setTimeout(() => {
-      nav.style.display = 'none';
+      nav.style.display = "none";
     }, 100);
   }
 });
 
 // Function to get borrowed books from local storage
 function getBorrowedBooks() {
-  const storedBooks = JSON.parse(localStorage.getItem('borrowedBooks'));
+  const storedBooks = JSON.parse(localStorage.getItem("borrowedBooks"));
   return storedBooks;
 }
 // Function to create a table row element for a book
 function createBookRow(book) {
-  const tableRow = document.createElement('tr');
+  const tableRow = document.createElement("tr");
 
-  const nameCell = document.createElement('td');
+  const nameCell = document.createElement("td");
   nameCell.textContent = book.name;
   tableRow.appendChild(nameCell);
 
-  const authorCell = document.createElement('td');
+  const authorCell = document.createElement("td");
   authorCell.textContent = book.author;
   tableRow.appendChild(authorCell);
 
@@ -54,9 +54,9 @@ function createBookRow(book) {
 
 // Function to display borrowed books in a table
 function displayBorrowedBooks(books) {
-  const tableBody = document.getElementById('borrowedBooks');
+  const tableBody = document.getElementById("borrowedBooks");
 
-  tableBody.innerHTML = ''; // Clear existing rows
+  tableBody.innerHTML = ""; // Clear existing rows
 
   for (const book of books) {
     const bookRow = createBookRow(book);

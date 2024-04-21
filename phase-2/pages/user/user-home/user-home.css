@@ -2,7 +2,6 @@
   min-height: calc(100vh - 62px - 88px);
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #f7f7f7;
 }
 .books {
   display: grid;
@@ -72,4 +71,26 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-top: -10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--primary-radius);
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -9px;
+  padding: 10px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-top-right-radius: var(--primary-radius);
+  border-bottom-right-radius: var(--primary-radius);
+  cursor: pointer;
 }
