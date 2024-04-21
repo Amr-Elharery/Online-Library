@@ -1,0 +1,27 @@
+.content {
+  min-height: calc(100vh - 62px - 88px);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.books .book {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border-radius: var(primary-radius);
+  -webkit-border-radius: var(primary-radius);
+  -moz-border-radius: var(primary-radius);
+  -ms-border-radius: var(primary-radius);
+  -o-border-radius: var(primary-radius);
+}
+
+.books .book img {
+  width: 200px;
+  max-width: 100%;
+}
