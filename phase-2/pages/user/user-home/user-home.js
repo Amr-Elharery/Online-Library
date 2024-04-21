@@ -38,9 +38,9 @@ let adminBooks = JSON.parse(localStorage.getItem('books')) || [];
 
 let userBorrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks')) || [];
 
-function renderBooks() {
+function renderBooks(books) {
   booksHolder.innerHTML = '';
-  adminBooks.forEach((book) => {
+  books.forEach((book) => {
     let bookHolder = document.createElement('div');
     bookHolder.classList.add('book');
     bookHolder.innerHTML = `
@@ -80,7 +80,7 @@ function renderBooks() {
   });
 }
 
-renderBooks();
+renderBooks(adminBooks);
 
 function handleBorrowedBook(id) {
   let book = adminBooks.find((book) => book.id === id);
@@ -91,3 +91,21 @@ function handleBorrowedBook(id) {
 function handleMoreDetails(id) {
   window.location.href = `../more-details/more-details.html?id=${id}`;
 }
+
+// Handle search
+let searchInput = document.getElementById('searchBar');
+let searchBtn = document.getElementById('searchBtn');
+function searchBooks() {
+  let searchValue = searchInput.value.toLowerCase();
+  let filteredBooks = adminBooks.filter((book) => {
+    return (
+      book.name.toLowerCase().includes(searchValue) ||
+      book.author.toLowerCase().includes(searchValue) ||
+      book.category.toLowerCase().includes(searchValue)
+    );
+  });
+  renderBooks(filteredBooks);
+}
+
+searchBtn.addEventListener('click', searchBooks);
+searchInput.addEventListener('keyup', searchBooks);

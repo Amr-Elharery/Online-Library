@@ -2,9 +2,9 @@
   min-height: calc(100vh - 62px - 88px);
   padding-top: 80px;
   padding-bottom: 80px;
-  /* background-color: #f7f7f7; */
   background-image: url(../../../media/images/main-bg.jpg);
   background-size: cover;
+  background-position: center;
   position: relative;
 }
 .books {
