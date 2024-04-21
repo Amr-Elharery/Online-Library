@@ -72,7 +72,7 @@ let books = [
     name: 'Thinking With Type',
     image: '5.jpg',
     initialBook: true,
-    available: true,
+    available: false,
     author: 'Ellen Lupton',
     category: 'Graphic Design',
     description:

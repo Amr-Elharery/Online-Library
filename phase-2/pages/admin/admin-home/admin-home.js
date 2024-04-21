@@ -8,7 +8,11 @@ function renderBooks() {
     bookHolder.classList.add('book');
     bookHolder.innerHTML = `
     <div class="book-img">
-              <img src="../.././../media/books/${book.image}" alt="Book" />
+              <img src=${
+                book.initialBook
+                  ? `../../../media/books/${book.image}`
+                  : `${book.image}`
+              } alt="Book" />
             </div>
             <div class="book-info flex flex-col">
               <div class="book-title">Title: ${book.name}</div>
@@ -60,6 +64,7 @@ renderStoredBooksBtn.addEventListener('click', () => {
       link: 'https://printige.net/product/engineering-optical-networks',
       name: 'Engineering Optical Networks',
       image: '1.png',
+      initialBook: true,
       available: false,
       author: 'Sudhir Warier',
       category: 'Physics',
@@ -71,6 +76,7 @@ renderStoredBooksBtn.addEventListener('click', () => {
       link: 'https://printige.net/product/clean-code/',
       name: 'Clean Code',
       image: '2.jpg',
+      initialBook: true,
       available: true,
       author: 'Robert C. Martin',
       category: 'Software Engineering',
@@ -82,6 +88,7 @@ renderStoredBooksBtn.addEventListener('click', () => {
       link: 'https://printige.net/product/essential-math-for-data-science/',
       name: 'Essential Math for Data Science',
       image: '3.jpg',
+      initialBook: true,
       available: true,
       author: 'Thomas Nield',
       category: 'Mathmatics',
@@ -93,6 +100,7 @@ renderStoredBooksBtn.addEventListener('click', () => {
       link: 'https://printige.net/product/atomic-habits/',
       name: 'Atomic Habits',
       image: '4.jpg',
+      initialBook: true,
       available: true,
       author: 'James Clear',
       category: 'Self-Help',
@@ -104,7 +112,8 @@ renderStoredBooksBtn.addEventListener('click', () => {
       link: 'https://printige.net/product/thinking-with-type/',
       name: 'Thinking With Type',
       image: '5.jpg',
-      available: true,
+      initialBook: true,
+      available: false,
       author: 'Ellen Lupton',
       category: 'Graphic Design',
       description:

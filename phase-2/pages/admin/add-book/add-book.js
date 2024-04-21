@@ -2,8 +2,28 @@ let form = document.getElementById('add-form');
 let submitBtn = document.getElementById('add-submit');
 
 let books = JSON.parse(localStorage.getItem('books')) || [];
+
+let imageSrc = '';
+function handleImageLoad() {
+  const fileInput = document.getElementById('book_image');
+
+  fileInput.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        imageSrc = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    }
+  });
+}
+handleImageLoad();
 submitBtn.addEventListener('click', () => {
-  if (validate) {
+  if (validate()) {
     let book = {
       id: getMaxId(books) + 1,
       name: document.getElementById('book_name').value,
@@ -11,6 +31,8 @@ submitBtn.addEventListener('click', () => {
       author: document.getElementById('book_author').value,
       category: document.getElementById('book_category').value,
       description: document.getElementById('book_description').value,
+      initialBook: false,
+      image: imageSrc,
     };
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
@@ -49,25 +71,3 @@ function getMaxId(books) {
     return 0;
   }
 }
-
-function handleImageLoad() {
-  const fileInput = document.getElementById('book_image');
-  const previewImage = document.getElementById('previewImage');
-
-  fileInput.addEventListener('change', function (event) {
-    const file = event.target.files[0];
-
-    if (file) {
-      const reader = new FileReader();
-
-      reader.onload = function (e) {
-        console.log(e.target.result);
-        previewImage.src = e.target.result;
-      };
-
-      reader.readAsDataURL(file);
-    }
-  });
-}
-
-handleImageLoad();
