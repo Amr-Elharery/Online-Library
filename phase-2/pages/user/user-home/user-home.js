@@ -1,53 +1,45 @@
 var currentPageUrl = window.location.href;
 
 function highlightActiveLink() {
-  var links = document.querySelectorAll("nav a");
+  var links = document.querySelectorAll('nav a');
 
   links.forEach(function (link) {
     if (link.href === currentPageUrl) {
-      link.classList.add("active");
+      link.classList.add('active');
     }
   });
 }
 
 highlightActiveLink();
 
-let menu = document.getElementById("menu-icon");
-let nav = document.getElementById("toogle-nav");
+let menu = document.getElementById('menu-icon');
+let nav = document.getElementById('toogle-nav');
 
 // Toggling navbar in mobile
-menu.addEventListener("click", () => {
-  if (nav.style.left != "0px") {
-    nav.style.display = "flex";
+menu.addEventListener('click', () => {
+  if (nav.style.left != '0px') {
+    nav.style.display = 'flex';
     setTimeout(() => {
-      nav.style.left = "0px";
-      nav.style.opacity = "1";
+      nav.style.left = '0px';
+      nav.style.opacity = '1';
     }, 100);
   } else {
-    nav.style.left = "100%";
-    nav.style.opacity = "0";
+    nav.style.left = '100%';
+    nav.style.opacity = '0';
     setTimeout(() => {
-      nav.style.display = "none";
+      nav.style.display = 'none';
     }, 100);
   }
 });
 
-function borrow() {
-  alert("The Book has been added to your borrowed-books page go check it :)");
-  window.location.href = "../borrowed-books/borrowed-books.html";
-}
-function borrowed() {
-  alert("Sorry but this book is borrowed by another student for now :(");
-}
-
-let booksHolder = document.getElementById("booksHolder");
-let adminBooks = JSON.parse(localStorage.getItem("books")) || [];
+let booksHolder = document.getElementById('booksHolder');
+let adminBooks = JSON.parse(localStorage.getItem('books')) || [];
 
 function renderBooks() {
-  booksHolder.innerHTML = "";
+  booksHolder.innerHTML = '';
   adminBooks.forEach((book) => {
-    let bookHolder = document.createElement("div");
-    bookHolder.classList.add("book");
+    let bookHolder = document.createElement('div');
+    bookHolder.classList.add('book');
     bookHolder.innerHTML = `
              <div class="book-img">
               <img src=${
@@ -73,14 +65,12 @@ function renderBooks() {
                 })">
                    <i class="fas fa-handshake"></i> Borrow
                 </button>
-
+                </div>
                 <button id="moreDetails" class="btn-shape btn-effect" onclick="handleMoreDetails(${
                   book.id
                 })">
                   <i class="fas fa-info-circle"></i> More Details
                 </button>
-             
-                </div>
             </div>
     `;
     booksHolder.appendChild(bookHolder);

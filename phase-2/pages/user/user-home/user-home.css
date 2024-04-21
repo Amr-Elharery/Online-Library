@@ -56,8 +56,8 @@
   padding-bottom: 5px;
   border-bottom: 1px solid #eee;
 }
-.books .book .book-info .buttons button,
-.books .book .book-info .buttons button a {
+.books .book .book-info button,
+.books .book .book-info button a {
   cursor: pointer;
   color: #fff;
 }
