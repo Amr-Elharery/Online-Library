@@ -18,7 +18,12 @@ function renderBooks() {
                 <button id="editBook" class="btn-shape btn-effect" onclick="handleEditBook(${book})">
                   <a href="../edit-book/edit-book.html">Edit</a>
                 </button>
-                <button id="deleteBook" class="btn-shape btn-effect" onclick="handleDeleteBook(${book.id})">
+                <button class="btn-shape btn-effect ${
+                  book.available ? '' : 'notAvailable'
+                }">${book.available ? 'Available' : 'Not Available'}</button>
+                <button id="deleteBook" class="btn-shape btn-effect" onclick="handleDeleteBook(${
+                  book.id
+                })">
                   Delete
                 </button>
               </div>
@@ -55,7 +60,7 @@ renderStoredBooksBtn.addEventListener('click', () => {
       link: 'https://printige.net/product/engineering-optical-networks',
       name: 'Engineering Optical Networks',
       image: '1.png',
-      available: true,
+      available: false,
       author: 'Sudhir Warier',
       category: 'Physics',
       description:

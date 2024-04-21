@@ -45,6 +45,7 @@
 
 .books .book .book-info {
   padding: 10px;
+  font-size: 15px;
   gap: 15px;
   color: #444;
 }
@@ -59,4 +60,10 @@
 .books .book .book-info .buttons button a {
   cursor: pointer;
   color: #fff;
+}
+.books .book .book-info .buttons .notAvailable {
+  background-color: #f00;
+}
+.books .book .book-info .buttons .notAvailable:hover {
+  background-color: #bf0000;
 }
