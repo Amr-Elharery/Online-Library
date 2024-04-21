@@ -2,7 +2,9 @@
   min-height: calc(100vh - 62px - 88px);
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-image: url(../../../media/images/main-bg.jpg);
+  background-size: cover;
   position: relative;
 }
 .books {
@@ -92,6 +94,16 @@
 }
 
 /* Search */
+.searchBar {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+}
 .searchBtn {
   color: #fff;
+  cursor: pointer;
 }
