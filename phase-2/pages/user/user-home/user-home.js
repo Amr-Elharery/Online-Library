@@ -1,3 +1,4 @@
+'use strict';
 var currentPageUrl = window.location.href;
 
 function highlightActiveLink() {
@@ -34,6 +35,7 @@ menu.addEventListener('click', () => {
 
 let booksHolder = document.getElementById('booksHolder');
 let adminBooks = JSON.parse(localStorage.getItem('books')) || [];
+let userBorrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks')) || [];
 
 function renderBooks() {
   booksHolder.innerHTML = '';
@@ -60,9 +62,7 @@ function renderBooks() {
                   }"> <i class="fas fa-shopping-cart"></i> Buy</a>
                 </button>
 
-                <button id="borrow" class="btn-shape btn-effect" onclick="handleBorrowBook(${
-                  book.id
-                })">
+                <button id="borrow" class="btn-shape btn-effect" onclick="handleBorrowedBook(${book})">
                    <i class="fas fa-handshake"></i> Borrow
                 </button>
                 </div>
@@ -79,6 +79,9 @@ function renderBooks() {
 
 renderBooks();
 
-function handleBorrowedBook(id) {}
+function handleBorrowedBook(book) {
+  userBorrowedBooks.push(book);
+  localStorage.setItem('borrowedBooks', JSON.stringify(userBorrowedBooks));
+}
 
 function handleMoreDetails(id) {}
