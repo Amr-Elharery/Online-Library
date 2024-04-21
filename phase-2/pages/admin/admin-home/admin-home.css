@@ -2,10 +2,11 @@
   min-height: calc(100vh - 62px - 88px);
   padding-top: 80px;
   padding-bottom: 80px;
+  background-color: #f7f7f7;
 }
 .books {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -13,15 +14,31 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  border-radius: var(primary-radius);
-  -webkit-border-radius: var(primary-radius);
-  -moz-border-radius: var(primary-radius);
-  -ms-border-radius: var(primary-radius);
-  -o-border-radius: var(primary-radius);
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
 }
 
 .books .book img {
-  width: 200px;
+  transition: var(--primary-transition);
+  width: 100%;
+  height: 350px;
   max-width: 100%;
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
+
+.books .book img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
