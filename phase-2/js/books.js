@@ -7,6 +7,7 @@ interface IBook {
     link: String;
     name: String;
     image: String;
+    initialBook: Boolean,
     available:Boolean;
     author: String;
     category: String;
@@ -22,6 +23,7 @@ let books = [
     link: 'https://printige.net/product/engineering-optical-networks',
     name: 'Engineering Optical Networks',
     image: '1.png',
+    initialBook: true,
     available: false,
     author: 'Sudhir Warier',
     category: 'Physics',
@@ -33,6 +35,7 @@ let books = [
     link: 'https://printige.net/product/clean-code/',
     name: 'Clean Code',
     image: '2.jpg',
+    initialBook: true,
     available: true,
     author: 'Robert C. Martin',
     category: 'Software Engineering',
@@ -44,6 +47,7 @@ let books = [
     link: 'https://printige.net/product/essential-math-for-data-science/',
     name: 'Essential Math for Data Science',
     image: '3.jpg',
+    initialBook: true,
     available: true,
     author: 'Thomas Nield',
     category: 'Mathmatics',
@@ -55,6 +59,7 @@ let books = [
     link: 'https://printige.net/product/atomic-habits/',
     name: 'Atomic Habits',
     image: '4.jpg',
+    initialBook: true,
     available: true,
     author: 'James Clear',
     category: 'Self-Help',
@@ -66,6 +71,7 @@ let books = [
     link: 'https://printige.net/product/thinking-with-type/',
     name: 'Thinking With Type',
     image: '5.jpg',
+    initialBook: true,
     available: true,
     author: 'Ellen Lupton',
     category: 'Graphic Design',

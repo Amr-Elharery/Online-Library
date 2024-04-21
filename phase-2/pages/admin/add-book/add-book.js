@@ -49,3 +49,25 @@ function getMaxId(books) {
     return 0;
   }
 }
+
+function handleImageLoad() {
+  const fileInput = document.getElementById('book_image');
+  const previewImage = document.getElementById('previewImage');
+
+  fileInput.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        console.log(e.target.result);
+        previewImage.src = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    }
+  });
+}
+
+handleImageLoad();
