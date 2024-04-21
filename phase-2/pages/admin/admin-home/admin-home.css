@@ -3,6 +3,7 @@
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: #f7f7f7;
+  position: relative;
 }
 .books {
   display: grid;
@@ -66,4 +67,26 @@
 }
 .books .book .book-info .buttons .notAvailable:hover {
   background-color: #bf0000;
+}
+
+.no-books {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #f00;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }

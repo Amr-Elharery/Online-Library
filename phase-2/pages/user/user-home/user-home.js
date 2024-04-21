@@ -88,4 +88,6 @@ function handleBorrowedBook(id) {
   localStorage.setItem('borrowedBooks', JSON.stringify(userBorrowedBooks));
 }
 
-function handleMoreDetails(id) {}
+function handleMoreDetails(id) {
+  window.location.href = `../more-details/more-details.html?id=${id}`;
+}
