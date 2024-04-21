@@ -35,6 +35,7 @@ menu.addEventListener('click', () => {
 
 let booksHolder = document.getElementById('booksHolder');
 let adminBooks = JSON.parse(localStorage.getItem('books')) || [];
+
 let userBorrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks')) || [];
 
 function renderBooks() {
@@ -62,7 +63,9 @@ function renderBooks() {
                   }"> <i class="fas fa-shopping-cart"></i> Buy</a>
                 </button>
 
-                <button id="borrow" class="btn-shape btn-effect" onclick="handleBorrowedBook(${book})">
+                <button id="borrow" class="btn-shape btn-effect" onclick="handleBorrowedBook(${
+                  book.id
+                })">
                    <i class="fas fa-handshake"></i> Borrow
                 </button>
                 </div>
@@ -79,7 +82,8 @@ function renderBooks() {
 
 renderBooks();
 
-function handleBorrowedBook(book) {
+function handleBorrowedBook(id) {
+  let book = adminBooks.find((book) => book.id === id);
   userBorrowedBooks.push(book);
   localStorage.setItem('borrowedBooks', JSON.stringify(userBorrowedBooks));
 }
