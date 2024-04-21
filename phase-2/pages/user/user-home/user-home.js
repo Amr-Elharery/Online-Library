@@ -39,3 +39,56 @@ function borrow() {
 function borrowed() {
   alert("Sorry but this book is borrowed by another student for now :(");
 }
+
+let booksHolder = document.getElementById("booksHolder");
+let adminBooks = JSON.parse(localStorage.getItem("books")) || [];
+
+function renderBooks() {
+  booksHolder.innerHTML = "";
+  adminBooks.forEach((book) => {
+    let bookHolder = document.createElement("div");
+    bookHolder.classList.add("book");
+    bookHolder.innerHTML = `
+             <div class="book-img">
+              <img src=${
+                book.initialBook
+                  ? `../../../media/books/${book.image}`
+                  : `${book.image}`
+              } alt="Book" />
+            </div>
+            <div class="book-info flex flex-col">
+              <div class="book-title">Title: ${book.name}</div>
+              <div class="book-author">Author: ${book.author}</div>
+              <div class="book-category">Category: ${book.category}</div>
+              <div class="buttons flex flex-between">
+                
+              <button id="editBook" class="btn-shape btn-effect">
+                  <a href="${
+                    book.link
+                  }"> <i class="fas fa-shopping-cart"></i> Buy</a>
+                </button>
+
+                <button id="borrow" class="btn-shape btn-effect" onclick="handleBorrowBook(${
+                  book.id
+                })">
+                   <i class="fas fa-handshake"></i> Borrow
+                </button>
+
+                <button id="moreDetails" class="btn-shape btn-effect" onclick="handleMoreDetails(${
+                  book.id
+                })">
+                  <i class="fas fa-info-circle"></i> More Details
+                </button>
+             
+                </div>
+            </div>
+    `;
+    booksHolder.appendChild(bookHolder);
+  });
+}
+
+renderBooks();
+
+function handleBorrowedBook(id) {}
+
+function handleMoreDetails(id) {}

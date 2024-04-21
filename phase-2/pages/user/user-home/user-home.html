@@ -50,174 +50,17 @@
       </div>
     </header>
     <!-- End Header -->
+
     <!--    Content    -->
     <div class="content">
       <div class="container">
-        <div class="books-container">
+        <div class="books" id="booksHolder">
           <!-- Books -->
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../../media/books/1.png"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Engineering Optical Networks</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/engineering-optical-networks/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <!-- this has to be handled with js, if the user click on it the books go to the borrowed-books page -->
-                <a onclick="borrowBook(0)">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a href="../../user/more-details/more-details.html#1">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../../media/books/2.jpg"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Clean Code</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/clean-code/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <!-- this has to be handled with js, if the user click on it the books go to the borrowed-books page -->
-                <a onclick="borrowBook(2)">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a href="../../user/more-details/more-details.html#2">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../../media/books/3.jpg"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Essential Math for Data Science</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/essential-math-for-data-science/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <!-- this has to be handled with js, if the user click on it the books go to the borrowed-books page -->
-                <a onclick="borrowBook(2)">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a href="../../user/more-details/more-details.html#3">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../../media/books/4.jpg"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Atomic Habits</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/atomic-habits/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <!-- this has to be handled with js, if the user click on it the books go to the borrowed-books page -->
-                <a onclick="borrowBook(3)">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a href="../../user/more-details/more-details.html#4">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../../media/books/5.jpg"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Thinking With Type</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/thinking-with-type/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <!-- this has to be handled with js, if the user click on it the books go to the borrowed-books page -->
-                <a onclick="borrowBook(4)">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a href="../../user/more-details/more-details.html#5">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
+          <!-- Rendered by JS -->
         </div>
       </div>
     </div>
+
     <!-- Start Footer -->
     <footer>
       <div class="container flex flex-col">
@@ -249,7 +92,7 @@
       </div>
     </footer>
     <!-- Footer Ended -->
+    <script src="../../../js/books.js"></script>
     <script src="user-home.js"></script>
-    <script src="local-storage-handler.js"></script>
   </body>
 </html>
