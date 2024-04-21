@@ -7,6 +7,11 @@
   border-radius: 20px;
   background-color: rgb(241, 241, 241);
 }
+.content {
+  min-height: calc(100vh - 62px - 88px);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 
 #name {
   text-align: center;

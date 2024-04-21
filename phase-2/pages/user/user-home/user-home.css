@@ -2,7 +2,6 @@
   min-height: calc(100vh - 62px - 88px);
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #f7f7f7;
 }
 .books {
   display: grid;
