@@ -49,7 +49,7 @@ function handleDeleteBook(id) {
   let index = adminBooks.findIndex((book) => book.id === id);
   adminBooks.splice(index, 1);
   localStorage.setItem("books", JSON.stringify(adminBooks));
-  renderBooks(addminBooks);
+  renderBooks(adminBooks);
 }
 
 function handleEditBook(book) {
