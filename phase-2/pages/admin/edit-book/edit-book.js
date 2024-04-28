@@ -10,7 +10,8 @@ function getBookDetails() {
   document.getElementById("description").value = bookDetail.description;
 }
 
-function updateBook() {
+function updateBook(e) {
+  e.preventDefault();
   const updatedId = +document.getElementById("book-id").value;
   const updatedName = document.getElementById("book-name").value;
   const updatedAuthor = document.getElementById("author").value;
@@ -31,11 +32,9 @@ function updateBook() {
   localStorage.setItem("books", JSON.stringify(books));
 
   // For testing
-  // window.location.href = '../admin-home/admin-home.html';
-  // let homeLink = document.createElement("a");
-  // homeLink.href = "../admin-home/admin-home.html";
-  // homeLink.click();
+  console.log("Before ",location.href);
+  window.location.href = '../admin-home/admin-home.html';
 }
 
 getBookDetails();
-editForm.addEventListener("submit", updateBook);
+editForm.addEventListener("submit", (e)=> updateBook(e));
