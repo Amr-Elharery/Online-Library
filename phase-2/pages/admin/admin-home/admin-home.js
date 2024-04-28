@@ -53,9 +53,8 @@ function handleDeleteBook(id) {
 }
 
 function handleEditBook(id) { 
-  localStorage.removeItem('editedBook');
   let bookDetails = adminBooks.find((book) => book.id === id);
-  localStorage.setItem("editedBook",  JSON.stringify(bookDetails));
+  sessionStorage.setItem("editedBook",  JSON.stringify(bookDetails));
 }
 
 // For reset stored books
