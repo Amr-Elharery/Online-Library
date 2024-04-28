@@ -1,4 +1,4 @@
-let bookDetail = JSON.parse(localStorage.getItem("editedBook"));
+let bookDetail = JSON.parse(sessionStorage.getItem("editedBook"));
 const form = document.getElementById("edit-form");
 
 function getBookDetails() {
@@ -32,17 +32,10 @@ function updateBook() {
   localStorage.setItem("books", JSON.stringify(books));
 
   alert(
-    "Book details updated successfully:\nId: " +
-      updatedId +
-      "\nBook Name: " +
-      updatedName +
-      "\nAuthor: " +
-      updatedAuthor +
-      "\nCategory: " +
-      updatedCategory +
-      "\nDescription: " +
-      updatedDescription
+    "Book details updated successfully"
   );
+
+  window.location.href='../admin-home/admin-home.html'
 }
 
 getBookDetails();
