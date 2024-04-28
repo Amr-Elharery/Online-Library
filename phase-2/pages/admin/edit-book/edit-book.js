@@ -1,5 +1,6 @@
 let bookDetail = JSON.parse(sessionStorage.getItem("editedBook"));
-const form = document.getElementById("edit-form");
+const editForm = document.getElementById("edit-form");
+let books = JSON.parse(localStorage.getItem("books")) || [];
 
 function getBookDetails() {
   document.getElementById("book-id").value = bookDetail.id;
@@ -15,7 +16,6 @@ function updateBook() {
   const updatedAuthor = document.getElementById("author").value;
   const updatedCategory = document.getElementById("category").value;
   const updatedDescription = document.getElementById("description").value;
-  let books = JSON.parse(localStorage.getItem("books")) || [];
   let index = books.findIndex((book) => book.id === bookDetail.id);
   books[index] = {
     id: updatedId,
@@ -28,15 +28,14 @@ function updateBook() {
     available: bookDetail.available,
     link: bookDetail.link,
   };
-  localStorage.removeItem("books");
   localStorage.setItem("books", JSON.stringify(books));
 
-  alert(
-    "Book details updated successfully"
-  );
-
-  window.location.href='../admin-home/admin-home.html'
+  // For testing
+  // window.location.href = '../admin-home/admin-home.html';
+  // let homeLink = document.createElement("a");
+  // homeLink.href = "../admin-home/admin-home.html";
+  // homeLink.click();
 }
 
 getBookDetails();
-form.addEventListener("submit", updateBook);
+editForm.addEventListener("submit", updateBook);
