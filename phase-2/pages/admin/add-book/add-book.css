@@ -81,3 +81,16 @@ nav a.active {
   color: #fff;
   cursor: pointer;
 }
+
+.addForm {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
