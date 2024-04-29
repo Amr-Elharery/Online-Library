@@ -68,6 +68,7 @@
 .books .book .book-info button.notAvailable {
   background-color: #ba4848;
   cursor: no-drop;
+  opacity: .7;
 }
 
 /* Style for the active link */
