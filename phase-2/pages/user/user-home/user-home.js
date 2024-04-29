@@ -35,7 +35,6 @@ menu.addEventListener("click", () => {
 
 let booksHolder = document.getElementById("booksHolder");
 let adminBooks = JSON.parse(localStorage.getItem("books")) || [];
-
 let userBorrowedBooks = JSON.parse(localStorage.getItem("borrowedBooks")) || [];
 
 function renderBooks(books) {
