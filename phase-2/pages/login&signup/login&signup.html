@@ -72,13 +72,22 @@
         <div class="form-container sign-up">
           <form action="#" id="signup-form" class="signup-form">
             <h1 class="topForm">Create Account</h1>
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" />
-            <input type="tel" placeholder="Phone Number" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="text" placeholder="First Name" required />
+            <input type="text" placeholder="Last Name" required />
+            <input
+              type="password"
+              id="signupPassword"
+              placeholder="Password"
+              required
+            />
+            <input
+              type="password"
+              id="signupConfirmPassword"
+              placeholder="Confirm Password"
+              required
+            />
+            <input type="tel" placeholder="Phone Number" required />
+            <input type="email" placeholder="Email" required />
 
             <select id="user_role" name="user_role" required>
               <option value="disabled" disabled selected>Select Role</option>
@@ -93,7 +102,7 @@
               >
             </div>
 
-            <button class="btn-effect" onclick="goLogin()">Sign Up</button>
+            <button class="btn-effect">Sign Up</button>
           </form>
         </div>
         <!-- End Sign Up -->
@@ -166,6 +175,7 @@
     </footer>
     <!-- Footer Ended -->
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="login&signup.js"></script>
   </body>
 </html>
