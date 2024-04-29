@@ -86,6 +86,7 @@ function handleBorrowedBook(id) {
   let book = adminBooks.find((book) => book.id === id);
   userBorrowedBooks.push(book);
   localStorage.setItem("borrowedBooks", JSON.stringify(userBorrowedBooks));
+  alert("The book has been added to your borrowed books list successfully");
 }
 
 function handleMoreDetails(id) {
