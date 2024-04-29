@@ -1,3 +1,17 @@
+var currentPageUrl = window.location.href;
+
+function highlightActiveLink() {
+  var links = document.querySelectorAll("nav a");
+
+  links.forEach(function (link) {
+    if (link.href === currentPageUrl) {
+      link.classList.add("active");
+    }
+  });
+}
+
+highlightActiveLink();
+
 let booksHolder = document.getElementById("booksHolder");
 let adminBooks = JSON.parse(localStorage.getItem("books")) || [];
 
@@ -20,7 +34,9 @@ function renderBooks(books) {
                 <div class="book-author">Author: ${book.author}</div>
                 <div class="book-category">Category: ${book.category}</div>
                 <div class="buttons flex flex-between">
-                  <button id="editBook" class="btn-shape btn-effect"  onclick="handleEditBook(${book.id})">
+                  <button id="editBook" class="btn-shape btn-effect"  onclick="handleEditBook(${
+                    book.id
+                  })">
                     <a href="../edit-book/edit-book.html">Edit</a>
                   </button>
   
@@ -52,9 +68,9 @@ function handleDeleteBook(id) {
   renderBooks(adminBooks);
 }
 
-function handleEditBook(id) { 
+function handleEditBook(id) {
   let bookDetails = adminBooks.find((book) => book.id === id);
-  sessionStorage.setItem("editedBook",  JSON.stringify(bookDetails));
+  sessionStorage.setItem("editedBook", JSON.stringify(bookDetails));
 }
 
 // For reset stored books
