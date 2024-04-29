@@ -98,7 +98,9 @@ function handleBorrowedBook(id) {
     text: 'You should login first!',
     icon: 'error',
   });
-  window.location.href = '../login&signup/login&signup.html';
+  setTimeout(() => {
+    window.location.href = '../login&signup/login&signup.html';
+  }, 2000);
 }
 
 function handleMoreDetails(id) {
@@ -107,7 +109,9 @@ function handleMoreDetails(id) {
     text: 'You should login first!',
     icon: 'error',
   });
-  window.location.href = '../login&signup/login&signup.html';
+  setTimeout(() => {
+    window.location.href = '../login&signup/login&signup.html';
+  }, 2000);
 }
 
 // Handle search
