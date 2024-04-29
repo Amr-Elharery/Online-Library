@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../../css/all.min.css" />
-    <link rel="stylesheet" href="../../../css/global.css" />
-    <link rel="stylesheet" href="../../../css/header.css" />
-    <link rel="stylesheet" href="../../../css/footer.css" />
+    <link rel="stylesheet" href="../../css/all.min.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
     <link rel="stylesheet" href="home.css" />
     <title>Home</title>
   </head>
@@ -22,7 +22,7 @@
         </div>
         <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
         <nav id="toogle-nav">
-          <ul class="flex">
+          <ul class="flex items-center">
             <li>
               <a href="../home/home.html" class="btn-shape btn-effect">Home</a>
             </li>
@@ -49,9 +49,15 @@
             </li>
             <!-- added a search container here -->
             <li>
-              <input type="text" placeholder="Search..." id="searchBar" />
-              <button type="submit" id="searchBtn">
-                <i class="fas fa-search"></i>
+              <input
+                type="text"
+                name="searchBar"
+                class="searchBar"
+                id="searchBar"
+                placeholder="Search..."
+              />
+              <button class="btn-shape btn-effect searchBtn" id="searchBtn">
+                <i class="fa-solid fa-search"></i>
               </button>
             </li>
           </ul>
@@ -70,7 +76,7 @@
     </div>
     <!-- Start Footer -->
     <footer>
-      <div class="container flex flex-col">
+      <div class="container flex-col">
         <div class="up flex flex-between items-center">
           <h2>Follow Us</h2>
           <div class="links flex">
@@ -99,7 +105,6 @@
     </footer>
     <!-- Footer Ended -->
     <script src="../../js/books.js"></script>
-    <script src="../../js/borrowedBooks.js"></script>
     <script src="home.js"></script>
   </body>
 </html>
