@@ -2,7 +2,7 @@
   min-height: calc(100vh - 62px - 88px);
   padding-top: 80px;
   padding-bottom: 80px;
-  background-image: url('../../../media/images/main-bg.jpg');
+  background-image: url("../../../media/images/main-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,24 +70,17 @@ nav a.active {
   background-color: var(--primary-alt-color);
 }
 
-input[type='text'] {
-  width: 100%;
-  margin-top: -10px;
-  padding: 8px;
+/* Search */
+.searchBar {
   border: 1px solid #ccc;
+  padding: 8px;
   border-radius: var(--primary-radius);
-  font-size: 16px;
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
 }
-
-button[type='submit'] {
-  position: absolute;
-  margin-left: -10px;
-  margin-top: -9px;
-  padding: 10px;
-  border: none;
-  background-color: var(--primary-color);
+.searchBtn {
   color: #fff;
-  border-top-right-radius: var(--primary-radius);
-  border-bottom-right-radius: var(--primary-radius);
   cursor: pointer;
 }

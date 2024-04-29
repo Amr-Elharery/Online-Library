@@ -22,7 +22,7 @@
         </div>
         <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
         <nav id="toogle-nav">
-          <ul class="flex">
+          <ul class="flex items-center">
             <li>
               <a href="../user-home/user-home.html" class="btn-shape btn-effect"
                 >Home</a
@@ -42,9 +42,15 @@
             </li>
             <!-- added a search container here -->
             <li>
-              <input type="text" placeholder="Search..." id="searchBar" />
-              <button type="submit" id="searchBtn">
-                <i class="fas fa-search"></i>
+              <input
+                type="text"
+                name="searchBar"
+                class="searchBar"
+                id="searchBar"
+                placeholder="Search..."
+              />
+              <button class="btn-shape btn-effect searchBtn" id="searchBtn">
+                <i class="fa-solid fa-search"></i>
               </button>
             </li>
           </ul>
@@ -65,7 +71,7 @@
 
     <!-- Start Footer -->
     <footer>
-      <div class="container flex flex-col">
+      <div class="container flex-col">
         <div class="up flex flex-between items-center">
           <h2>Follow Us</h2>
           <div class="links flex">
