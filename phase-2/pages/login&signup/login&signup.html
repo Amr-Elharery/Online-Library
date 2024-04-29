@@ -16,105 +16,119 @@
     <header>
       <div class="container flex flex-between items-center">
         <div class="logo">
-          <a href="#">
+          <a href="../../index.html">
             <i class="fa-solid fa-book c-primary"></i>
             MyBook
           </a>
         </div>
         <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
-        <nav id="toggle-nav">
-          <ul class="flex">
+        <nav id="toogle-nav">
+          <ul class="flex items-center">
             <li>
               <a href="../home/home.html" class="btn-shape btn-effect">Home</a>
             </li>
             <li>
               <a
-                href="../login&signup/login&signup.html"
+                href="../../pages/login&signup/login&signup.html"
                 class="btn-shape btn-effect"
                 >Log In</a
               >
             </li>
             <li>
               <a
-                href="../login&signup/login&signup.html"
+                href="../../pages/login&signup/login&signup.html"
                 class="btn-shape btn-effect"
                 >Sign Up</a
               >
             </li>
             <li>
               <a
-                href="../contact-us/contact-us.html"
+                href="../../pages/contact-us/contact-us.html"
                 class="btn-shape btn-effect"
                 >Contact Us</a
               >
+            </li>
+            <!-- added a search container here -->
+            <li>
+              <input
+                type="text"
+                name="searchBar"
+                class="searchBar"
+                id="searchBar"
+                placeholder="Search..."
+              />
+              <button class="btn-shape btn-effect searchBtn" id="searchBtn">
+                <i class="fa-solid fa-search"></i>
+              </button>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <!-- End Header -->
+    <div class="content">
+      <div class="main-container" id="main-container">
+        <!-- Start Sign Up -->
+        <div class="form-container sign-up">
+          <form action="#" id="signup-form" class="signup-form">
+            <h1 class="topForm">Create Account</h1>
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" />
+            <input type="tel" placeholder="Phone Number" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
 
-    <div class="main-container" id="main-container">
-      <!-- Start Sign Up -->
-      <div class="form-container sign-up">
-        <form action="#" id="signup-form" class="signup-form">
-          <h1>Create Account</h1>
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-          <input type="password" placeholder="Password" />
-          <input type="password" placeholder="Confirm Password" />
-          <input type="tel" placeholder="Phone Number" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+            <select id="user_role" name="user_role" required>
+              <option value="disabled" disabled selected>Select Role</option>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
 
-          <select id="user_role" name="user_role" required>
-            <option value="disabled" disabled selected>Select Role</option>
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-          </select>
+            <div class="terms">
+              <input type="checkbox" id="checkbox" required />
+              <label for="checkbox"
+                >I agree to the <a href="#">Terms & Conditions</a></label
+              >
+            </div>
 
-          <div class="terms">
-            <input type="checkbox" id="checkbox" required />
-            <label for="checkbox"
-              >I agree to the <a href="#">Terms & Conditions</a></label
-            >
-          </div>
+            <button class="btn-effect" onclick="goLogin()">Sign Up</button>
+          </form>
+        </div>
+        <!-- End Sign Up -->
 
-          <button>Sign Up</button>
-        </form>
-      </div>
-      <!-- End Sign Up -->
+        <!-- Start Login -->
+        <div class="form-container sign-in loginForm">
+          <form action="#" id="l-form" class="l-form">
+            <h1 class="topForm">Log In</h1>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
 
-      <!-- Start Login -->
-      <div class="form-container sign-in loginForm">
-        <form action="#" id="l-form" class="l-form">
-          <h1>Log In</h1>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+            <select id="user_role_Login" name="user_role_Login" required>
+              <option value="disabled" disabled selected>Select Role</option>
+              <option value="USER">User</option>
+              <option value="ADMIN">Admin</option>
+            </select>
+            <a href="#">Forget Your Password?</a>
 
-          <select id="user_role_Login" name="user_role_Login" required>
-            <option value="disabled" disabled selected>Select Role</option>
-            <option value="USER">User</option>
-            <option value="ADMIN">Admin</option>
-          </select>
-          <a href="#">Forget Your Password?</a>
+            <button type="l-submit" class="btn-effect">Log In</button>
+          </form>
+        </div>
+        <!-- End Login -->
 
-          <button type="l-submit">Log In</button>
-        </form>
-      </div>
-      <!-- End Login -->
-
-      <div class="toggle-container">
-        <div class="toggle">
-          <div class="toggle-panel toggle-left">
-            <h1>Welcome Back!</h1>
-            <p>Thanks for choosing our library</p>
-            <button class="hidden" id="login">Log In</button>
-          </div>
-          <div class="toggle-panel toggle-right">
-            <h1>Hello, Friend!</h1>
-            <p>Register now to stay connected with our library community</p>
-            <button class="hidden" id="register">Sign Up</button>
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-left">
+              <h1>Welcome Back!</h1>
+              <p>Thanks for choosing our library</p>
+              <button class="hidden" id="login">Log In</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+              <h1>Hello, Friend!</h1>
+              <p>Register now to stay connected with our library community</p>
+              <button class="hidden" id="register">Sign Up</button>
+            </div>
           </div>
         </div>
       </div>
