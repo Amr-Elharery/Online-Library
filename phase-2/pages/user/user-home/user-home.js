@@ -64,7 +64,9 @@ function renderBooks(books) {
 
                 <button id="borrow" class="btn-shape btn-effect ${book.available ? "" : "notAvailable"}" onclick="handleBorrowedBook(${
                   book.id
-                })">
+                })"
+                disabled=${book.available}
+                >
                    <i class="fas fa-handshake"></i> Borrow
                 </button>
                 </div>

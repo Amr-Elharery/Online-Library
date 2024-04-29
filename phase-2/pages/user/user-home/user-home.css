@@ -2,7 +2,7 @@
   min-height: calc(100vh - 62px - 88px);
   padding-top: 80px;
   padding-bottom: 80px;
-  background-image: url("../../../media/images/main-bg.jpg");
+  background-image: url('../../../media/images/main-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -65,8 +65,8 @@
   color: #fff;
 }
 
-.books .book .book-info button.notAvailable{
-  background-color: #f00;
+.books .book .book-info button.notAvailable {
+  background-color: #ba4848;
   cursor: no-drop;
 }
 
