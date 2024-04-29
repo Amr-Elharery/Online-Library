@@ -43,14 +43,22 @@ loginBtn.addEventListener('click', () => {
   container.classList.remove('active');
 });
 
+// Log in
 document.addEventListener('DOMContentLoaded', function () {
   document
     .getElementById('l-form')
     .addEventListener('submit', function (event) {
       event.preventDefault();
-
+      let logPassword = document.getElementById('logPassword');
       var selectedRole = document.getElementById('user_role_Login').value;
-
+      if(logPassword.value.length < 8){
+        Swal.fire({
+          title: 'Error!',
+          text: 'Password less than 8!',
+          icon: 'error',
+        });
+        return;
+      }
       if (selectedRole === 'USER') {
         window.location.href = '../user/user-home/user-home.html';
       } else if (selectedRole === 'ADMIN') {
@@ -59,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Sign up
 document
   .getElementById('signup-form')
   .addEventListener('submit', function (event) {
