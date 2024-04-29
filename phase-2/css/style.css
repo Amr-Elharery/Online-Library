@@ -44,3 +44,18 @@
     width: 300px;
   }
 }
+
+/* Search */
+.searchBar {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+}
+.searchBtn {
+  color: #fff;
+  cursor: pointer;
+}
