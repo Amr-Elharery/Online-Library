@@ -1,41 +1,41 @@
 var currentPageUrl = window.location.href;
 
 function highlightActiveLink() {
-  var links = document.querySelectorAll("nav a");
+  var links = document.querySelectorAll('nav a');
 
   links.forEach(function (link) {
     if (link.href === currentPageUrl) {
-      link.classList.add("active");
+      link.classList.add('active');
     }
   });
 }
 
 highlightActiveLink();
 
-let menu = document.getElementById("menu-icon");
-let nav = document.getElementById("toogle-nav");
+let menu = document.getElementById('menu-icon');
+let nav = document.getElementById('toogle-nav');
 
 // Toggling navbar in mobile
-menu.addEventListener("click", () => {
-  if (nav.style.left != "0px") {
-    nav.style.display = "flex";
+menu.addEventListener('click', () => {
+  if (nav.style.left != '0px') {
+    nav.style.display = 'flex';
     setTimeout(() => {
-      nav.style.left = "0px";
-      nav.style.opacity = "1";
+      nav.style.left = '0px';
+      nav.style.opacity = '1';
     }, 100);
   } else {
-    nav.style.left = "100%";
-    nav.style.opacity = "0";
+    nav.style.left = '100%';
+    nav.style.opacity = '0';
     setTimeout(() => {
-      nav.style.display = "none";
+      nav.style.display = 'none';
     }, 100);
   }
 });
 
 function disableBackButton() {
-  window.history.pushState(null, "", window.location.href);
+  window.history.pushState(null, '', window.location.href);
   window.onpopstate = function () {
-    window.history.pushState(null, "", window.location.href);
+    window.history.pushState(null, '', window.location.href);
   };
 }
 
@@ -44,15 +44,15 @@ window.onload = function () {
   disableBackButton();
 };
 
-let booksHolder = document.getElementById("booksHolder");
-let adminBooks = JSON.parse(localStorage.getItem("books")) || [];
-let userBorrowedBooks = JSON.parse(localStorage.getItem("borrowedBooks")) || [];
+let booksHolder = document.getElementById('booksHolder');
+let adminBooks = JSON.parse(localStorage.getItem('books')) || [];
+let userBorrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks')) || [];
 
 function renderBooks(books) {
-  booksHolder.innerHTML = "";
+  booksHolder.innerHTML = '';
   books.forEach((book) => {
-    let bookHolder = document.createElement("div");
-    bookHolder.classList.add("book");
+    let bookHolder = document.createElement('div');
+    bookHolder.classList.add('book');
     bookHolder.innerHTML = `
              <div class="book-img">
               <img src=${
@@ -93,18 +93,26 @@ function renderBooks(books) {
 renderBooks(adminBooks);
 
 function handleBorrowedBook(id) {
-  alert("Sorry, But you have to Log In first");
-  window.location.href = "../login&signup/login&signup.html";
+  Swal.fire({
+    title: 'Error!',
+    text: 'You should login first!',
+    icon: 'error',
+  });
+  window.location.href = '../login&signup/login&signup.html';
 }
 
 function handleMoreDetails(id) {
-  alert("Sorry, But you have to Log In first");
-  window.location.href = "../login&signup/login&signup.html";
+  Swal.fire({
+    title: 'Error!',
+    text: 'You should login first!',
+    icon: 'error',
+  });
+  window.location.href = '../login&signup/login&signup.html';
 }
 
 // Handle search
-let searchInput = document.getElementById("searchBar");
-let searchBtn = document.getElementById("searchBtn");
+let searchInput = document.getElementById('searchBar');
+let searchBtn = document.getElementById('searchBtn');
 function searchBooks() {
   let searchValue = searchInput.value.toLowerCase();
   let filteredBooks = adminBooks.filter((book) => {
@@ -117,5 +125,5 @@ function searchBooks() {
   renderBooks(filteredBooks);
 }
 
-searchBtn.addEventListener("click", searchBooks);
-searchInput.addEventListener("keyup", searchBooks);
+searchBtn.addEventListener('click', searchBooks);
+searchInput.addEventListener('keyup', searchBooks);
