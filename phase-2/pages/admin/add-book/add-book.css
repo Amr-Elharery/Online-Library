@@ -1,7 +1,11 @@
 .content {
-  background-color: #f7f7f7;
-  padding: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 62px - 88px);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url(../../../media/images/main-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 h1 {
@@ -18,7 +22,7 @@ label {
   display: block;
 }
 
-input[type='text'],
+input[type="text"],
 textarea {
   width: 100%;
   padding: 10px;
@@ -29,7 +33,7 @@ textarea {
   resize: none;
 }
 
-input[type='file'] {
+input[type="file"] {
   font-size: 16px;
 }
 
@@ -61,4 +65,19 @@ nav a.active {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* Search */
+.searchBar {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+}
+.searchBtn {
+  color: #fff;
+  cursor: pointer;
 }

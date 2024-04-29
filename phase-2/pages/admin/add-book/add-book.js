@@ -1,13 +1,27 @@
-let form = document.getElementById('add-form');
-let submitBtn = document.getElementById('add-submit');
+var currentPageUrl = window.location.href;
 
-let books = JSON.parse(localStorage.getItem('books')) || [];
+function highlightActiveLink() {
+  var links = document.querySelectorAll("nav a");
 
-let imageSrc = '';
+  links.forEach(function (link) {
+    if (link.href === currentPageUrl) {
+      link.classList.add("active");
+    }
+  });
+}
+
+highlightActiveLink();
+
+let form = document.getElementById("add-form");
+let submitBtn = document.getElementById("add-submit");
+
+let books = JSON.parse(localStorage.getItem("books")) || [];
+
+let imageSrc = "";
 function handleImageLoad() {
-  const fileInput = document.getElementById('book_image');
+  const fileInput = document.getElementById("book_image");
 
-  fileInput.addEventListener('change', function (event) {
+  fileInput.addEventListener("change", function (event) {
     const file = event.target.files[0];
 
     if (file) {
@@ -22,36 +36,36 @@ function handleImageLoad() {
   });
 }
 handleImageLoad();
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener("click", () => {
   if (validate()) {
     let book = {
       id: getMaxId(books) + 1,
-      name: document.getElementById('book_name').value,
+      name: document.getElementById("book_name").value,
       available: true,
-      author: document.getElementById('book_author').value,
-      category: document.getElementById('book_category').value,
-      description: document.getElementById('book_description').value,
+      author: document.getElementById("book_author").value,
+      category: document.getElementById("book_category").value,
+      description: document.getElementById("book_description").value,
       initialBook: false,
       image: imageSrc,
     };
     books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
-    window.location.href = '../admin-home/admin-home.html';
+    localStorage.setItem("books", JSON.stringify(books));
+    window.location.href = "../admin-home/admin-home.html";
   }
 });
 
 function validate() {
-  let bookName = document.getElementById('book_name').value;
-  let bookAuthor = document.getElementById('book_author').value;
-  let bookCategory = document.getElementById('book_category').value;
-  let bookDescription = document.getElementById('book_description').value;
+  let bookName = document.getElementById("book_name").value;
+  let bookAuthor = document.getElementById("book_author").value;
+  let bookCategory = document.getElementById("book_category").value;
+  let bookDescription = document.getElementById("book_description").value;
   if (
-    bookName == '' ||
-    bookAuthor == '' ||
-    bookCategory == '' ||
-    bookDescription == ''
+    bookName == "" ||
+    bookAuthor == "" ||
+    bookCategory == "" ||
+    bookDescription == ""
   ) {
-    alert('Please fill all the fields');
+    alert("Please fill all the fields");
     return false;
   } else {
     return true;
