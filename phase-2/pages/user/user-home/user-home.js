@@ -62,7 +62,7 @@ function renderBooks(books) {
                   }"> <i class="fas fa-shopping-cart"></i> Buy</a>
                 </button>
 
-                <button id="borrow" class="btn-shape btn-effect" onclick="handleBorrowedBook(${
+                <button id="borrow" class="btn-shape btn-effect ${book.available ? "" : "notAvailable"}" onclick="handleBorrowedBook(${
                   book.id
                 })">
                    <i class="fas fa-handshake"></i> Borrow

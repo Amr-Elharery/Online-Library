@@ -57,7 +57,7 @@ function renderBooks(books) {
              <div class="book-img">
               <img src=${
                 book.initialBook
-                  ? `../../../media/books/${book.image}`
+                  ? `../../media/books/${book.image}`
                   : `${book.image}`
               } alt="Book" />
             </div>
