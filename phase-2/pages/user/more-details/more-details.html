@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../../css/all.min.css" />
+    <link rel="stylesheet" href="../../../../css/all.min.css" />
     <link rel="stylesheet" href="../../../css/global.css" />
     <link rel="stylesheet" href="../../../css/header.css" />
     <link rel="stylesheet" href="../../../css/footer.css" />
@@ -40,30 +40,35 @@
                 >Log out</a
               >
             </li>
-            <!-- added a search container here -->
             <li>
-              <input type="text" placeholder="Search..." />
-              <button type="submit"><i class="fas fa-search"></i></button>
+              <input
+                type="text"
+                name="searchBar"
+                class="searchBar"
+                id="searchBar"
+                placeholder="Search..."
+              />
+              <button class="btn-shape btn-effect searchBtn" id="searchBtn">
+                <i class="fa-solid fa-search"></i>
+              </button>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <!-- End Header -->
-    <br />
-    <br />
+
     <!--    Content    -->
     <div class="content">
-      <div class="container">
-        <div class="book-details" id="book-details">
-          <!-- Books -->
-        </div>
+      <div class="book-details" id="book-details">
+        <!-- Books -->
       </div>
     </div>
+    <!-- End Content -->
 
     <!-- Start Footer -->
     <footer>
-      <div class="container flex flex-col">
+      <div class="container flex-col">
         <div class="up flex flex-between items-center">
           <h2>Follow Us</h2>
           <div class="links flex">

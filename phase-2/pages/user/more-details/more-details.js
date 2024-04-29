@@ -35,7 +35,7 @@ function renderBook() {
     <div id="${book.id}">
       <br />
       <div class="name-author-category">
-        <p id="name"><b>Name: ${book.name}</b></p>
+        <p id="name"> <b>Name:</b> <b id="nm"> ${book.name}</b></p>
         <p id="author"><b>Author: </b> ${book.author}</p>
         <p id="category"><b>Category: </b> ${book.category}</p>
       </div>

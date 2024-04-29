@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/all.min.css" />
-    <link rel="stylesheet" href="../../css/global.css" />
-    <link rel="stylesheet" href="../../css/header.css" />
-    <link rel="stylesheet" href="../../css/footer.css" />
-
+    <link rel="stylesheet" href="../../../css/all.min.css" />
+    <link rel="stylesheet" href="../../../css/global.css" />
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/footer.css" />
     <link rel="stylesheet" href="home.css" />
-
     <title>Home</title>
   </head>
   <body>
@@ -17,7 +15,7 @@
     <header>
       <div class="container flex flex-between items-center">
         <div class="logo">
-          <a href="../../index.html">
+          <a href="../../../index.html">
             <i class="fa-solid fa-book c-primary"></i>
             MyBook
           </a>
@@ -26,29 +24,37 @@
         <nav id="toogle-nav">
           <ul class="flex">
             <li>
-              <a href="../home/home.html" class="btn-shape btn-effect">Home</a>
+              <a href="../user-home/user-home.html" class="btn-shape btn-effect"
+                >Home</a
+              >
             </li>
             <li>
-              <a href="../login/login.html" class="btn-shape btn-effect"
+              <a
+                href="../../pages/login&signup/login&signup.html"
+                class="btn-shape btn-effect"
                 >Log In</a
               >
             </li>
             <li>
-              <a href="../signup/signup.html" class="btn-shape btn-effect"
+              <a
+                href="../../pages/login&signup/login&signup.html"
+                class="btn-shape btn-effect"
                 >Sign Up</a
               >
             </li>
             <li>
               <a
-                href="../contact-us/contact-us.html"
+                href="../../pages/contact-us/contact-us.html"
                 class="btn-shape btn-effect"
                 >Contact Us</a
               >
             </li>
             <!-- added a search container here -->
             <li>
-              <input type="text" placeholder="Search..." />
-              <button type="submit"><i class="fas fa-search"></i></button>
+              <input type="text" placeholder="Search..." id="searchBar" />
+              <button type="submit" id="searchBtn">
+                <i class="fas fa-search"></i>
+              </button>
             </li>
           </ul>
         </nav>
@@ -58,163 +64,9 @@
     <!--    Content    -->
     <div class="content">
       <div class="container">
-        <div class="books-container">
+        <div class="books" id="booksHolder">
           <!-- Books -->
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../media/books/1.png"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Engineering Optical Networks</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/engineering-optical-networks/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../media/books/2.jpg"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Clean Code</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/clean-code/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../media/books/3.jpg"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Essential Math for Data Science</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/essential-math-for-data-science/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../media/books/4.jpg"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Atomic Habits</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/atomic-habits/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="book">
-            <div class="image">
-              <img
-                src="../../media/books/5.jpg"
-                alt="Image of book"
-                width="250"
-                height="300"
-              />
-              <p>Thinking With Type</p>
-            </div>
-            <div class="buttons">
-              <button class="btn-shape btn-effect">
-                <a
-                  href="https://printige.net/product/thinking-with-type/"
-                  target="_blank"
-                >
-                  <i class="fas fa-shopping-cart"></i> Buy
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-handshake"></i> Borrow
-                </a>
-              </button>
-              <button class="btn-shape btn-effect">
-                <a onclick="showAlert()">
-                  <i class="fas fa-info-circle"></i> More Details
-                </a>
-              </button>
-            </div>
-          </div>
+          <!-- Rendered by JS -->
         </div>
       </div>
     </div>
@@ -241,7 +93,6 @@
             </a>
           </div>
         </div>
-
         <div class="down flex justify-center items-center">
           &copy; 2024 <a href="#"><span class="c-primary">MyBook.</span></a> All
           rights reserved.
@@ -249,6 +100,8 @@
       </div>
     </footer>
     <!-- Footer Ended -->
-    <script src="home.js"></script>
+    <script src="../../../js/books.js"></script>
+    <script src="../../../js/borrowedBooks.js"></script>
+    <script src="user-home.js"></script>
   </body>
 </html>

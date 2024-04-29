@@ -1,67 +1,81 @@
-.book {
-  border: 1px solid #ffffff;
-  border-radius: 8px;
-  height: 370px;
-  padding: 3rem 1rem;
-  margin-bottom: 100px;
-  border-radius: 20px;
-  background-color: rgb(241, 241, 241);
-}
 .content {
   min-height: calc(100vh - 62px - 88px);
   padding-top: 80px;
   padding-bottom: 80px;
-}
-
-#name {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 20px;
-}
-
-.description p {
-  font-size: 18px;
-  margin: 15px;
-}
-
-body {
-  background-image: url("../../../media/images/main-bg.jpg");
+  background-image: url(../../../media/images/main-bg.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+}
+
+.flex {
+  align-items: center;
 }
 
 h3 {
   font-weight: bold;
 }
 
-input[type="text"] {
-  width: 100%;
-  margin-top: -10px;
-  padding: 8px;
+/* Search */
+.searchBar {
   border: 1px solid #ccc;
+  padding: 8px;
   border-radius: var(--primary-radius);
-  font-size: 16px;
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
 }
-
-button[type="submit"] {
-  position: absolute;
-  margin-left: -10px;
-  margin-top: -9px;
-  padding: 10px;
-  border: none;
-  background-color: var(--primary-color);
+.searchBtn {
   color: #fff;
-  border-top-right-radius: var(--primary-radius);
-  border-bottom-right-radius: var(--primary-radius);
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: var(--primary-alt-color);
-  transition: var(--primary-transition);
+/* Book Design */
+.book-div {
+  display: flex;
+  font-family: "Arial", sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: var(--primary-radius);
+  background-color: #f9f9f9;
+  max-width: 350px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 
-.fa-search {
-  font-size: 18px;
+.book-div .name-author-category {
+  background-color: #f7f7f7;
+  border-left: 4px solid var(--primary-color);
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.book-div .name-author-category p {
+  margin: 0;
+  font-style: italic;
+}
+
+.book-div .name-author-category p#name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.book-div .name-author-category b#nm {
+  color: var(--primary-alt-color);
+}
+
+.book-div .description {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.book-div b {
+  color: var(--primary-color);
 }
