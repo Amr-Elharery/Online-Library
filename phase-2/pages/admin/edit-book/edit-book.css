@@ -1,67 +1,81 @@
-
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .content {
-    max-width: 500px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 62px - 88px);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url(../../../media/images/main-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.editForm {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    background-image: linear-gradient(135deg,var(--primary-color), black);
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 30px;
+  background-image: linear-gradient(135deg, var(--primary-color), black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 label {
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
 }
 
 input[type="text"],
 textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 input[type="file"] {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 button {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: var(--primary-alt-color);
+  background-color: var(--primary-alt-color);
 }
 
-footer{
-    margin-top: auto;
+footer {
+  margin-top: auto;
 }
