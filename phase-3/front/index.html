@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Online Library: MyBook</title>
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container flex flex-between items-center">
+        <div class="logo">
+          <a href="#">
+            <i class="fa-solid fa-book c-primary"></i>
+            MyBook
+          </a>
+        </div>
+        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+        <nav id="toggle-nav">
+          <ul class="flex items-center">
+            <li>
+              <a href="pages/home/home.html" class="btn-shape btn-effect"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="pages/login&signup/login&signup.html"
+                class="btn-shape btn-effect"
+                >Log In</a
+              >
+            </li>
+            <li>
+              <a
+                href="pages/login&signup/login&signup.html"
+                class="btn-shape btn-effect"
+                >Sign Up</a
+              >
+            </li>
+            <li>
+              <a
+                href="pages/contact-us/contact-us.html"
+                class="btn-shape btn-effect"
+                >Contact Us</a
+              >
+            </li>
+            <!-- added a search container here -->
+            <li>
+              <input
+                type="text"
+                name="searchBar"
+                class="searchBar"
+                id="searchBar"
+                placeholder="Search..."
+              />
+              <button class="btn-shape btn-effect searchBtn" id="searchBtn">
+                <i class="fa-solid fa-search"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Landing -->
+    <div class="landing flex items-center">
+      <div class="container flex flex-between items-center">
+        <div class="text">
+          <h1 calss="main-header">
+            Welcome to our Online Library: MyBook, For Easy Borrowing and Buying
+            Books
+          </h1>
+          <a href="pages/home/home.html" class="c-primary btn-shape">
+            <!-- <i class="fa-solid fa-arrow-right"></i> 
+            -->
+            Explore
+            <i class="fa-solid fa-home"></i>
+          </a>
+        </div>
+        <div class="img">
+          <img src="media/images/book-landing.png" alt="Read book" />
+        </div>
+      </div>
+    </div>
+    <!-- Landing -->
+    <!-- Start Footer -->
+    <footer>
+      <div class="container flex flex-col">
+        <div class="up flex flex-between items-center">
+          <h2>Follow Us</h2>
+          <div class="links flex">
+            <a href="https://facebook.com" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://x.com" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="down flex justify-center items-center">
+          &copy; 2024 <a href="#"><span class="c-primary">MyBook.</span></a> All
+          rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Ended -->
+
+    <script src="js/main.js"></script>
+    <script src="js/books.js"></script>
+  </body>
+</html>

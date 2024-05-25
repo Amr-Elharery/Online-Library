@@ -1,0 +1,51 @@
+footer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-image: url(../media/images/macro-shot-jigsaw-puzzles-teamwork-concept.jpg);
+  background-size: cover;
+  background-position: 50%;
+  color: #fff;
+  position: relative;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer .container {
+  position: relative;
+  gap: 5px;
+}
+
+footer .up h2 {
+  font-size: 26px;
+}
+footer .up .links {
+  gap: 15px;
+}
+footer .up .links i {
+  color: #fff;
+  font-size: 24px;
+  transition: var(--primary-transition);
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
+
+footer .up .links i:hover {
+  color: var(--primary-color);
+}
+
+footer .down {
+  gap: 5px;
+}
+footer .down span {
+  font-size: 20px;
+  font-weight: bold;
+}

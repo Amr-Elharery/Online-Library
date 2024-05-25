@@ -1,0 +1,60 @@
+.content {
+  min-height: calc(100vh - 62px - 88px);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url("../../../media/images/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h3 {
+  font-family: "Arial Black", serif;
+  font-size: x-large;
+}
+em {
+  font-family: "Agency FB", serif;
+  font-size: large;
+}
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th {
+  border: 3px solid #dddddd;
+  text-align: center;
+  padding: 12px;
+  background-color: var(--primary-color);
+}
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+}
+
+.content {
+  min-height: calc(100vh - 62px - 88px);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+/* Style for the active link */
+nav a.active {
+  background-color: var(--primary-alt-color);
+}
+
+/* Search */
+.searchBar {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+}
+.searchBtn {
+  color: #fff;
+  cursor: pointer;
+}

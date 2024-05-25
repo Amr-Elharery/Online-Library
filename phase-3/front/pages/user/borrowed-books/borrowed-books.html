@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="borrowed-books.css" />
+    <link rel="stylesheet" href="../../../css/all.min.css" />
+    <link rel="stylesheet" href="../../../css/global.css" />
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/footer.css" />
+    <title>Borrowed Books</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container flex flex-between items-center">
+        <div class="logo">
+          <a href="../../../index.html">
+            <i class="fa-solid fa-book c-primary"></i>
+            MyBook
+          </a>
+        </div>
+        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+        <nav id="toogle-nav">
+          <ul class="flex items-center">
+            <li>
+              <a href="../user-home/user-home.html" class="btn-shape btn-effect"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../borrowed-books/borrowed-books.html"
+                class="btn-shape btn-effect"
+                >Borrowed Books</a
+              >
+            </li>
+            <li>
+              <a href="../../home/home.html" class="btn-shape btn-effect"
+                >Log out</a
+              >
+            </li>
+            <!-- added a search container here -->
+            <li>
+              <input
+                type="text"
+                name="searchBar"
+                class="searchBar"
+                id="searchBar"
+                placeholder="Search..."
+              />
+              <button class="btn-shape btn-effect searchBtn" id="searchBtn">
+                <i class="fa-solid fa-search"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <div class="content">
+      <div class="container">
+        <h3>Welcome, User</h3>
+        <!--//[User Name]-->
+        <em>Here are the books you have borrowed:</em>
+        <!-- table -->
+        <!--<table id = "borrowed-books-table">-->
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+            </tr>
+          </thead>
+          <tbody id="borrowedBooks"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="container flex flex-col">
+        <div class="up flex flex-between items-center">
+          <h2>Follow Us</h2>
+          <div class="links flex">
+            <a href="https://facebook.com" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://x.com" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="down flex justify-center items-center">
+          &copy; 2024 <a href="#"><span class="c-primary">MyBook.</span></a> All
+          rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Ended -->
+    <script src="borrowed-books.js"></script>
+  </body>
+</html>

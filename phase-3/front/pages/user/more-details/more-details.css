@@ -1,0 +1,81 @@
+.content {
+  min-height: calc(100vh - 62px - 88px);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url(../../../media/images/main-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.flex {
+  align-items: center;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+/* Search */
+.searchBar {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+}
+.searchBtn {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Book Design */
+.book-div {
+  display: flex;
+  font-family: "Arial", sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: var(--primary-radius);
+  background-color: #f9f9f9;
+  max-width: 450px;
+  border-radius: var(--primary-radius);
+  -webkit-border-radius: var(--primary-radius);
+  -moz-border-radius: var(--primary-radius);
+  -ms-border-radius: var(--primary-radius);
+  -o-border-radius: var(--primary-radius);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-div .name-author-category {
+  background-color: #f7f7f7;
+  border-left: 4px solid var(--primary-color);
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.book-div .name-author-category p {
+  margin: 0;
+  font-style: italic;
+}
+
+.book-div .name-author-category p#name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.book-div .name-author-category b#nm {
+  color: var(--primary-alt-color);
+}
+
+.book-div .description {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.book-div b {
+  color: var(--primary-color);
+}
