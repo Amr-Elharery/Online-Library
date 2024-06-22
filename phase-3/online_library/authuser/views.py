@@ -65,3 +65,27 @@ def user(request, id):
 
     response = {"Message": "404 Not Found", "status": 404}
     return JsonResponse(response, status=404)
+
+@csrf_exempt
+def login(request):        
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            user = CustomUser.objects.get(email=data["email"], password=data["password"])
+            if user is not None:
+                userData = UserSerializer(user).data
+                data = {
+                        "first_name": userData["first_name"],
+                        "is_staff": userData["is_staff"]
+                        }
+                response = {"Message": "200 OK", "status": 200, "body": data}
+                return JsonResponse(response)
+            else:
+                response = {"Message": "400 Bad Request", "status": 400, "errors": "Invalid user or password"}
+                return JsonResponse(response)
+        except Exception:
+            response = {"Message": "400 Bad Request", "status": 400, "errors": "Invalid user or password"}
+            return JsonResponse(response, status=400)
+    else:
+        response = {"Message": "405 Method Not Allowed", "status": 405}
+        return JsonResponse(response, status=405)
