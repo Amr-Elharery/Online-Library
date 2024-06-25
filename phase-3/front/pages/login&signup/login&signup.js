@@ -50,22 +50,60 @@ document.addEventListener('DOMContentLoaded', function () {
     .addEventListener('submit', function (event) {
       event.preventDefault();
       let logPassword = document.getElementById('logPassword');
-      var selectedRole = document.getElementById('user_role_Login').value;
-      if(logPassword.value.length < 8){
-        Swal.fire({
-          title: 'Error!',
-          text: 'Password less than 8!',
-          icon: 'error',
-        });
-        return;
-      }
-      if (selectedRole === 'USER') {
-        window.location.href = '../user/user-home/user-home.html';
-      } else if (selectedRole === 'ADMIN') {
-        window.location.href = '../admin/admin-home/admin-home.html';
-      }
+      let logEmail = document.getElementById('logEmail');
+      // if (logPassword.value.length < 8) {
+      //   Swal.fire({
+      //     title: 'Error!',
+      //     text: 'Password less than 8!',
+      //     icon: 'error',
+      //   });
+      //   return;
+      // }
+
+      login(logEmail.value, logPassword.value);
     });
 });
+
+function login(email, password) {
+  let _url = 'http://127.0.0.1:8000/users/login/';
+  let user = {
+    email,
+    password,
+  };
+  fetch(_url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(user),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        return response.json().then((err) => {
+          console.error('Error response:', err);
+          throw new Error(err.message || 'Login failed!');
+        });
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      localStorage.setItem('user', JSON.stringify(data.body));
+      if (data.body.is_staff) {
+        window.location.href = '../admin/admin-home/admin-home.html';
+      } else if (!data.body.is_staff) {
+        window.location.href = '../user/user-home/user-home.html';
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      Swal.fire({
+        title: 'Error!',
+        text: 'Login failed!',
+        icon: 'error',
+      });
+    });
+}
 
 // Sign up
 document
