@@ -1,175 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/all.min.css" />
-    <link rel="stylesheet" href="../../css/global.css" />
-    <link rel="stylesheet" href="../../css/header.css" />
-    <link rel="stylesheet" href="../../css/footer.css" />
-    <link rel="stylesheet" href="login&signup.css" />
-    <title>Log In or Sign Up</title>
-  </head>
 
-  <body>
-    <!-- Start Header -->
-    <header>
-      <div class="container flex flex-between items-center">
-        <div class="logo">
-          <a href="../../index.html">
-            <i class="fa-solid fa-book c-primary"></i>
-            MyBook
-          </a>
-        </div>
-        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
-        <nav id="toogle-nav">
-          <ul class="flex items-center">
-            <li>
-              <a href="../home/home.html" class="btn-shape btn-effect">Home</a>
-            </li>
-            <li>
-              <a
-                href="../../pages/login&signup/login&signup.html"
-                class="btn-shape btn-effect"
-                >Log In</a
-              >
-            </li>
-            <li>
-              <a
-                href="../../pages/login&signup/login&signup.html"
-                class="btn-shape btn-effect"
-                >Sign Up</a
-              >
-            </li>
-            <li>
-              <a
-                href="../../pages/contact-us/contact-us.html"
-                class="btn-shape btn-effect"
-                >Contact Us</a
-              >
-            </li>
-            <!-- added a search container here -->
-            <li>
-              <input
-                type="text"
-                name="searchBar"
-                class="searchBar"
-                id="searchBar"
-                placeholder="Search..."
-              />
-              <button class="btn-shape btn-effect searchBtn" id="searchBtn">
-                <i class="fa-solid fa-search"></i>
-              </button>
-            </li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../css/all.min.css" />
+  <link rel="stylesheet" href="../../css/global.css" />
+  <link rel="stylesheet" href="../../css/header.css" />
+  <link rel="stylesheet" href="../../css/footer.css" />
+  <link rel="stylesheet" href="login&signup.css" />
+  <title>Log In or Sign Up</title>
+</head>
+
+<body>
+  <!-- Start Header -->
+  <header>
+    <div class="container flex flex-between items-center">
+      <div class="logo">
+        <a href="../../index.html">
+          <i class="fa-solid fa-book c-primary"></i>
+          MyBook
+        </a>
       </div>
-    </header>
-    <!-- End Header -->
-    <div class="content">
-      <div class="main-container" id="main-container">
-        <!-- Start Sign Up -->
-        <div class="form-container sign-up">
-          <form action="#" id="signup-form" class="signup-form">
-            <h1 class="topForm">Create Account</h1>
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
-            <input
-              type="password"
-              id="signupPassword"
-              placeholder="Password"
-              required
-            />
-            <input
-              type="password"
-              id="signupConfirmPassword"
-              placeholder="Confirm Password"
-              required
-            />
-            <input type="tel" placeholder="Phone Number" required />
-            <input type="email" placeholder="Email" required />
+      <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+      <nav id="toogle-nav">
+        <ul class="flex items-center">
+          <li>
+            <a href="../home/home.html" class="btn-shape btn-effect">Home</a>
+          </li>
+          <li>
+            <a href="../../pages/login&signup/login&signup.html" class="btn-shape btn-effect">Log In</a>
+          </li>
+          <li>
+            <a href="../../pages/login&signup/login&signup.html" class="btn-shape btn-effect">Sign Up</a>
+          </li>
+          <li>
+            <a href="../../pages/contact-us/contact-us.html" class="btn-shape btn-effect">Contact Us</a>
+          </li>
+          <!-- added a search container here -->
+          <li>
+            <input type="text" name="searchBar" class="searchBar" id="searchBar" placeholder="Search..." />
+            <button class="btn-shape btn-effect searchBtn" id="searchBtn">
+              <i class="fa-solid fa-search"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+  <div class="content">
+    <div class="main-container" id="main-container">
+      <!-- Start Sign Up -->
+      <div class="form-container sign-up">
+        <form action="#" id="signup-form" class="signup-form">
+          <h1 class="topForm">Create Account</h1>
+          <input type="text" id="signupFirstName" placeholder="First Name" required />
+          <input type="text" id="signupLastName" placeholder="Last Name" required />
+          <input type="password" id="signupPassword" placeholder="Password" required />
+          <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required />
+          <input type="email" id="signupEmail" placeholder="Email" required />
 
-            <select id="user_role" name="user_role" required>
-              <option value="disabled" disabled selected>Select Role</option>
-              <option value="user">User</option>
-              <option value="admin">Admin</option>
-            </select>
+          <select id="user_role" name="user_role" required>
+            <option value="disabled" disabled selected>Select Role</option>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
 
-            <div class="terms">
-              <input type="checkbox" id="checkbox" required />
-              <label for="checkbox"
-                >I agree to the <a href="#">Terms & Conditions</a></label
-              >
-            </div>
+          <div class="terms">
+            <input type="checkbox" id="checkbox" required />
+            <label for="checkbox">I agree to the <a href="#">Terms & Conditions</a></label>
+          </div>
 
-            <button class="btn-effect">Sign Up</button>
-          </form>
-        </div>
-        <!-- End Sign Up -->
+          <button class="btn-effect">Sign Up</button>
+        </form>
+      </div>
+      <!-- End Sign Up -->
 
-        <!-- Start Login -->
-        <div class="form-container sign-in loginForm">
-          <form action="#" id="l-form" class="l-form">
-            <h1 class="topForm">Log In</h1>
-            <input type="email" placeholder="Email" required id="logEmail"/>
-            <input type="password" placeholder="Password"  required id="logPassword"/>
-            <!-- <a href="#">Forget Your Password?</a> -->
+      <!-- Start Login -->
+      <div class="form-container sign-in loginForm">
+        <form action="#" id="l-form" class="l-form">
+          <h1 class="topForm">Log In</h1>
+          <input type="email" placeholder="Email" required id="logEmail" />
+          <input type="password" placeholder="Password" required id="logPassword" />
+          <!-- <a href="#">Forget Your Password?</a> -->
 
-            <button type="l-submit" class="btn-effect">Log In</button>
-          </form>
-        </div>
-        <!-- End Login -->
+          <button type="l-submit" class="btn-effect">Log In</button>
+        </form>
+      </div>
+      <!-- End Login -->
 
-        <div class="toggle-container">
-          <div class="toggle">
-            <div class="toggle-panel toggle-left">
-              <h1>Welcome Back!</h1>
-              <p>Thanks for choosing our library</p>
-              <button class="hidden" id="login">Log In</button>
-            </div>
-            <div class="toggle-panel toggle-right">
-              <h1>Hello, Friend!</h1>
-              <p>Register now to stay connected with our library community</p>
-              <button class="hidden" id="register">Sign Up</button>
-            </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>Thanks for choosing our library</p>
+            <button class="hidden" id="login">Log In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hello, Friend!</h1>
+            <p>Register now to stay connected with our library community</p>
+            <button class="hidden" id="register">Sign Up</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Start Footer -->
-    <footer>
-      <div class="container flex flex-col">
-        <div class="up flex flex-between items-center">
-          <h2>Follow Us</h2>
-          <div class="links flex">
-            <a href="https://facebook.com" target="_blank">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://tiktok.com" target="_blank">
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <a href="https://x.com" target="_blank">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="down flex justify-center items-center">
-          &copy; 2024 <a href="#"><span class="c-primary">MyBook.</span></a> All
-          rights reserved.
+  <!-- Start Footer -->
+  <footer>
+    <div class="container flex flex-col">
+      <div class="up flex flex-between items-center">
+        <h2>Follow Us</h2>
+        <div class="links flex">
+          <a href="https://facebook.com" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://x.com" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </div>
       </div>
-    </footer>
-    <!-- Footer Ended -->
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="login&signup.js"></script>
-  </body>
+      <div class="down flex justify-center items-center">
+        &copy; 2024 <a href="#"><span class="c-primary">MyBook.</span></a> All
+        rights reserved.
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Ended -->
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="login&signup.js"></script>
+</body>
+
 </html>

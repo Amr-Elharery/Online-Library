@@ -1,7 +1,6 @@
 var currentPageUrl = window.location.href;
 let menu = document.getElementById('menu-icon');
 let nav = document.getElementById('toogle-nav');
-
 // Toggling navbar in mobile
 menu.addEventListener('click', () => {
   if (nav.style.left != '0px') {
@@ -51,14 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault();
       let logPassword = document.getElementById('logPassword');
       let logEmail = document.getElementById('logEmail');
-      // if (logPassword.value.length < 8) {
-      //   Swal.fire({
-      //     title: 'Error!',
-      //     text: 'Password less than 8!',
-      //     icon: 'error',
-      //   });
-      //   return;
-      // }
+      if (logPassword.value.length < 8) {
+        Swal.fire({
+          title: 'Error!',
+          text: 'Password less than 8!',
+          icon: 'error',
+        });
+        return;
+      }
 
       login(logEmail.value, logPassword.value);
     });
@@ -66,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function login(email, password) {
   let _url = 'http://127.0.0.1:8000/users/login/';
+
   let user = {
     email,
     password,
@@ -111,12 +111,18 @@ document
   .addEventListener('submit', function (event) {
     event.preventDefault();
     if (validate()) {
-      Swal.fire({
-        title: 'Great!',
-        text: 'You Signed up successfully!',
-        icon: 'success',
-      });
-      window.location.href = '../login&signup/login&signup.html';
+      let first_name = document.getElementById('signupFirstName');
+      let last_name = document.getElementById('signupLastName');
+      let email = document.getElementById('signupEmail');
+      let password = document.getElementById('signupPassword');
+      let role = document.getElementById('user_role');
+      signup(
+        email.value,
+        password.value,
+        first_name.value,
+        last_name.value,
+        role.value
+      );
     } else {
       Swal.fire({
         title: 'Error!',
@@ -125,6 +131,46 @@ document
       });
     }
   });
+
+function signup(email, password, first_name, last_name, role) {
+  let _url = 'http://127.0.0.1:8000/users/';
+  let user = {
+    email,
+    password,
+    first_name,
+    last_name,
+    is_staff: role === 'admin',
+    is_superuser: role === 'admin',
+  };
+  console.log(user);
+
+  fetch(_url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(user),
+  })
+    .then((res) => {
+      if (!res.ok) {
+        return res.json().then((err) => {
+          console.error('Error response:', err);
+          throw new Error(err.message || 'Signup failed!');
+        });
+      }
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      Swal.fire({
+        title: 'Great!',
+        text: 'You Signed up successfully!',
+        icon: 'success',
+      });
+      window.location.href = '../login&signup/login&signup.html';
+    })
+    .catch((err) => console.log(err));
+}
 
 function validate() {
   let password = document.getElementById('signupPassword');
