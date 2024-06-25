@@ -75,6 +75,7 @@ def login(request):
             if user is not None:
                 userData = UserSerializer(user).data
                 data = {
+                        "id": userData["id"],
                         "first_name": userData["first_name"],
                         "is_staff": userData["is_staff"]
                         }
