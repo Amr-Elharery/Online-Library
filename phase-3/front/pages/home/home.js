@@ -1,65 +1,80 @@
 var currentPageUrl = window.location.href;
 
 function highlightActiveLink() {
-  var links = document.querySelectorAll('nav a');
+  var links = document.querySelectorAll("nav a");
 
   links.forEach(function (link) {
     if (link.href === currentPageUrl) {
-      link.classList.add('active');
+      link.classList.add("active");
     }
   });
 }
 
 highlightActiveLink();
 
-let menu = document.getElementById('menu-icon');
-let nav = document.getElementById('toogle-nav');
+let menu = document.getElementById("menu-icon");
+let nav = document.getElementById("toogle-nav");
 
 // Toggling navbar in mobile
-menu.addEventListener('click', () => {
-  if (nav.style.left != '0px') {
-    nav.style.display = 'flex';
+menu.addEventListener("click", () => {
+  if (nav.style.left != "0px") {
+    nav.style.display = "flex";
     setTimeout(() => {
-      nav.style.left = '0px';
-      nav.style.opacity = '1';
+      nav.style.left = "0px";
+      nav.style.opacity = "1";
     }, 100);
   } else {
-    nav.style.left = '100%';
-    nav.style.opacity = '0';
+    nav.style.left = "100%";
+    nav.style.opacity = "0";
     setTimeout(() => {
-      nav.style.display = 'none';
+      nav.style.display = "none";
     }, 100);
   }
 });
 
 function disableBackButton() {
-  window.history.pushState(null, '', window.location.href);
+  window.history.pushState(null, "", window.location.href);
   window.onpopstate = function () {
-    window.history.pushState(null, '', window.location.href);
+    window.history.pushState(null, "", window.location.href);
   };
 }
 
-// Call the function when the page loads
-window.onload = function () {
-  disableBackButton();
-};
+let booksHolder = document.getElementById("booksHolder");
 
-let booksHolder = document.getElementById('booksHolder');
-let adminBooks = JSON.parse(localStorage.getItem('books')) || [];
-let userBorrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks')) || [];
+async function getBooks() {
+  let _url = "http://localhost:8000/books/";
+  try {
+    let res = await fetch(_url);
+    if (!res.ok) {
+      let err = await res.json();
+      throw new Error(err.message || "Error fetching books");
+    }
+    let data = await res.json();
+    return data.body;
+  } catch (err) {
+    Swal.fire({
+      title: "Error!",
+      text: err.message,
+      icon: "error",
+    });
+    return [];
+  }
+}
+
+getBooks().then((books) => {
+  adminBooks = books;
+  renderBooks(adminBooks);
+});
 
 function renderBooks(books) {
-  booksHolder.innerHTML = '';
-  books.forEach((book) => {
-    let bookHolder = document.createElement('div');
-    bookHolder.classList.add('book');
-    bookHolder.innerHTML = `
+  booksHolder.innerHTML = "";
+  if (books.length > 0) {
+    books.forEach((book) => {
+      let bookHolder = document.createElement("div");
+      bookHolder.classList.add("book");
+      bookHolder.innerHTML = `
              <div class="book-img">
-              <img src=${
-                book.initialBook
-                  ? `../../media/books/${book.image}`
-                  : `${book.image}`
-              } alt="Book" />
+              <img src=${`http://localhost:8000//${book.image}`} alt="Book" />
             </div>
             <div class="book-info flex flex-col">
               <div class="book-title">Title: ${book.name}</div>
@@ -86,37 +101,38 @@ function renderBooks(books) {
                 </button>
             </div>
     `;
-    booksHolder.appendChild(bookHolder);
-  });
+      booksHolder.appendChild(bookHolder);
+    });
+  } else {
+    booksHolder.innerHTML = '<div class="no-books">No books found</div>';
+  }
 }
-
-renderBooks(adminBooks);
 
 function handleBorrowedBook(id) {
   Swal.fire({
-    title: 'Error!',
-    text: 'You should login first!',
-    icon: 'error',
+    title: "Error!",
+    text: "You should login first!",
+    icon: "error",
   });
   setTimeout(() => {
-    window.location.href = '../login&signup/login&signup.html';
+    window.location.href = "../login&signup/login&signup.html";
   }, 2000);
 }
 
 function handleMoreDetails(id) {
   Swal.fire({
-    title: 'Error!',
-    text: 'You should login first!',
-    icon: 'error',
+    title: "Error!",
+    text: "You should login first!",
+    icon: "error",
   });
   setTimeout(() => {
-    window.location.href = '../login&signup/login&signup.html';
+    window.location.href = "../login&signup/login&signup.html";
   }, 2000);
 }
 
 // Handle search
-let searchInput = document.getElementById('searchBar');
-let searchBtn = document.getElementById('searchBtn');
+let searchInput = document.getElementById("searchBar");
+let searchBtn = document.getElementById("searchBtn");
 function searchBooks() {
   let searchValue = searchInput.value.toLowerCase();
   let filteredBooks = adminBooks.filter((book) => {
@@ -129,5 +145,5 @@ function searchBooks() {
   renderBooks(filteredBooks);
 }
 
-searchBtn.addEventListener('click', searchBooks);
-searchInput.addEventListener('keyup', searchBooks);
+searchBtn.addEventListener("click", searchBooks);
+searchInput.addEventListener("keyup", searchBooks);
