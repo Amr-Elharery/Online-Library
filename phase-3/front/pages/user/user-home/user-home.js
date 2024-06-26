@@ -105,14 +105,13 @@ function renderBooks(books) {
 
 function handleBorrowedBook(id) {
   let book = adminBooks.find((book) => book.id === id);
-
+  console.log(book);
   if (book.available) {
     let index = adminBooks.findIndex((book) => book.id === id);
     adminBooks[index].available = false;
     localStorage.setItem("books", JSON.stringify(adminBooks));
-
-    userBorrowedBooks.push(book);
-    localStorage.setItem("borrowedBooks", JSON.stringify(userBorrowedBooks));
+    borrowedBooks.push(book);
+    localStorage.setItem("borrowedBooks", JSON.stringify(borrowedBooks));
     Swal.fire({
       title: "Good job!",
       text: "The book has been added successfully",
