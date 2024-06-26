@@ -82,4 +82,5 @@ getBooks().then((books) => {
 
 document.getElementById("logout").addEventListener("click", () => {
   localStorage.removeItem("user");
+  localStorage.removeItem("borrowedBooks");
 });
