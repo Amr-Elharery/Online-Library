@@ -17,3 +17,6 @@ menu.addEventListener('click', () => {
     }, 100);
   }
 });
+
+
+// window.addEventListener('load', checkCredentials);

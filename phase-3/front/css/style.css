@@ -1,6 +1,6 @@
 .landing {
   min-height: calc(100vh - 62px);
-  background-image: url("../media/images/landing.jpg");
+  background-image: url('../media/images/landing.jpg');
   background-size: cover;
 }
 .landing .text {

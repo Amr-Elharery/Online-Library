@@ -57,6 +57,7 @@ textarea {
 
 .btn-shape {
   padding: 8px 15px;
+  cursor: pointer;
   border-radius: var(--primary-radius);
   -webkit-border-radius: var(--primary-radius);
   -moz-border-radius: var(--primary-radius);
@@ -98,6 +99,18 @@ textarea {
 
 .show-mobile {
   display: none;
+}
+.hide {
+  display: none;
+}
+.c-white {
+  color: #fff;
+}
+.center {
+  text-align: center;
+}
+.bold {
+  font-weight: bold;
 }
 
 @media (max-width: 767px) {

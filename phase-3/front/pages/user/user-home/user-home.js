@@ -129,3 +129,7 @@ function searchBooks() {
 
 searchBtn.addEventListener('click', searchBooks);
 searchInput.addEventListener('keyup', searchBooks);
+
+document.getElementById('logout').addEventListener('click', () => {
+  localStorage.removeItem('user');
+});

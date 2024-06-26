@@ -1,125 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Book</title>
 
-    <link rel="stylesheet" href="../../../css/all.min.css" />
-    <link rel="stylesheet" href="../../../css/global.css" />
-    <link rel="stylesheet" href="../../../css/header.css" />
-    <link rel="stylesheet" href="../../../css/footer.css" />
-    <link rel="stylesheet" href="add-book.css" />
-  </head>
-  <body>
-    <!-- Start Header -->
-    <header>
-      <div class="container flex flex-between items-center">
-        <div class="logo">
-          <a href="../../../index.html">
-            <i class="fa-solid fa-book c-primary"></i>
-            MyBook
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Book</title>
+
+  <link rel="stylesheet" href="../../../css/all.min.css" />
+  <link rel="stylesheet" href="../../../css/global.css" />
+  <link rel="stylesheet" href="../../../css/header.css" />
+  <link rel="stylesheet" href="../../../css/footer.css" />
+  <link rel="stylesheet" href="add-book.css" />
+</head>
+
+<body>
+  <!-- Start Header -->
+  <header>
+    <div class="container flex flex-between items-center">
+      <div class="logo">
+        <a href="../../../index.html">
+          <i class="fa-solid fa-book c-primary"></i>
+          MyBook
+        </a>
+      </div>
+      <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
+      <nav id="toggle-nav">
+        <ul class="flex items-center">
+          <li>
+            <a href="../admin-home/admin-home.html" class="btn-shape btn-effect">Home</a>
+          </li>
+          <li>
+            <a href="../add-book/add-book.html" class="btn-shape btn-effect">Add Book</a>
+          </li>
+
+          <li>
+            <a href="../../home/home.html" class="btn-shape btn-effect" id="logout">Log out</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <div class="content">
+    <div class="addForm">
+      <h1>Add A New Book</h1>
+      <form class="add-form flex flex-col" id="add-form">
+        <div class="form-group">
+          <label for="book_name">Book Name:</label>
+          <input type="text" id="book_name" name="book_name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="book_author">Author:</label>
+          <input type="text" id="book_author" name="author" required />
+        </div>
+
+        <div class="form-group">
+          <label for="book_category">Category:</label>
+          <input type="text" id="book_category" name="category" required />
+        </div>
+
+        <div class="form-group">
+          <label for="book_link">Link:</label>
+          <input type="text" id="book_link" name="link" required />
+        </div>
+
+        <div class="form-group">
+          <label for="book_description">Description:</label>
+          <textarea id="book_description" name="description" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="image">Image:</label>
+          <label for="book_image" class="btn-shape btn-effect c-white center">Upload</label>
+          <input type="file" id="book_image" name="image" required class="hide" />
+        </div>
+      </form>
+      <button type="submit" class="btn-shape btn-effect bold" id="add-submit">
+        Add
+      </button>
+    </div>
+  </div>
+
+  <!-- Start Footer -->
+  <footer>
+    <div class="container flex flex-col">
+      <div class="up flex flex-between items-center">
+        <h2>Follow Us</h2>
+        <div class="links flex">
+          <a href="https://facebook.com" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://x.com" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
-        <i class="fa-solid fa-bars menu-icon show-mobile" id="menu-icon"></i>
-        <nav id="toggle-nav">
-          <ul class="flex items-center">
-            <li>
-              <a
-                href="../admin-home/admin-home.html"
-                class="btn-shape btn-effect"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a href="../add-book/add-book.html" class="btn-shape btn-effect"
-                >Add Book</a
-              >
-            </li>
-
-            <li>
-              <a href="../../home/home.html" class="btn-shape btn-effect"
-                >Log out</a
-              >
-            </li>
-          </ul>
-        </nav>
       </div>
-    </header>
-    <!-- End Header -->
 
-    <div class="content">
-      <div class="addForm">
-        <h1>Add A New Book</h1>
-        <form class="add-form flex flex-col" id="add-form">
-          <div class="form-group">
-            <label for="book_name">Book Name:</label>
-            <input type="text" id="book_name" name="book_name" required />
-          </div>
-
-          <div class="form-group">
-            <label for="book_author">Author:</label>
-            <input type="text" id="book_author" name="author" required />
-          </div>
-
-          <div class="form-group">
-            <label for="book_category">Category:</label>
-            <input type="text" id="book_category" name="category" required />
-          </div>
-
-          <div class="form-group">
-            <label for="book_description">Description:</label>
-            <textarea
-              id="book_description"
-              name="description"
-              rows="4"
-              required
-            ></textarea>
-          </div>
-          <div class="form-group">
-            <label for="image">Image:</label>
-            <input type="file" id="book_image" name="image" required />
-          </div>
-        </form>
-        <button type="submit" class="btn-shape btn-effect" id="add-submit">
-          Add
-        </button>
+      <div class="down flex justify-center items-center">
+        &copy; 2024 <a href="#"><span class="c-primary">MyBook.</span></a> All
+        rights reserved.
       </div>
     </div>
+  </footer>
+  <!-- Footer Ended -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="add-book.js"></script>
+  <script src="../../../js/main.js"></script>
+</body>
 
-    <!-- Start Footer -->
-    <footer>
-      <div class="container flex flex-col">
-        <div class="up flex flex-between items-center">
-          <h2>Follow Us</h2>
-          <div class="links flex">
-            <a href="https://facebook.com" target="_blank">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://tiktok.com" target="_blank">
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <a href="https://x.com" target="_blank">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="down flex justify-center items-center">
-          &copy; 2024 <a href="#"><span class="c-primary">MyBook.</span></a> All
-          rights reserved.
-        </div>
-      </div>
-    </footer>
-    <!-- Footer Ended -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="add-book.js"></script>
-    <script src="../../../js/main.js"></script>
-  </body>
 </html>
